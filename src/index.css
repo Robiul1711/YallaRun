@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
 
@@ -8,11 +8,14 @@
 
 @theme {
   /* font */
-  --font-poppins: Poppins, sans-serif;
+  --font-urbanist: Urbanist, sans-serif;
 
   /* color */
 
-  --color-primary: green;
+  --color-primaryColor: #9fcc3b;
+  --color-secondaryColor: #005258;
+  --color-blackGray: #747474;
+  --color-customBlack: #111;
   --color-bg-custom: linear-gradient(red, yellow);
 
   /* breakpoint */
@@ -55,6 +58,12 @@
       transform: rotate(360deg);
     }
   }
+}
+
+body {
+  position: static !important;
+  top: 0px !important;
+  font-family: "Urbanist", sans-serif;
 }
 
 /* radius */
@@ -208,15 +217,146 @@
 
 @media screen and (min-width: 1460px) {
   .section-padding-x {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
   .section-padding-y {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 110px;
+    padding-bottom: 110px;
   }
 }
 
 .bg-custom {
   background: var(--color-bg-custom);
+}
+.banner-pagination .swiper-pagination-bullet {
+  background-color: white;
+  opacity: 1; /* keep full opacity */
+  width: 12px;
+  height: 12px;
+}
+
+/* Active bullet */
+.banner-pagination .swiper-pagination-bullet-active {
+  background-color: #9fcc3b;
+}
+
+.goog-te-gadget {
+  font-size: 0 !important;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+  .goog-te-gadget .goog-te-combo {
+    width: 120px !important;
+  }
+}
+
+.goog-te-gadget .goog-te-combo {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hide Google branding */
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.custom-language-select {
+  padding: 4px 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+}
+@media (min-width: 640px) {
+  .custom-language-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.custom-language-select:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loading-indicator {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+}
+
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  left: 0;
+  top: -53px !important;
+  height: 39px;
+  width: 100%;
+  z-index: 10000001;
+  display: none !important;
+}
+.VIpgJd-ZVi9od-ORHb {
+  display: none !important;
+}
+.goog-te-gadget span,
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+}
+
+/* Hide Google branding */
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+/* Hide Google Translate banner */
+#goog-gt-tt,
+.goog-te-banner-frame,
+.goog-logo-link,
+.goog-te-gadget {
+  display: none !important;
+}
+/* Prevent iframe balloon from affecting layout */
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+
+button {
+  cursor: pointer !important;
 }

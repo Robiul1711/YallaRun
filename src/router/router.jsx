@@ -1,6 +1,10 @@
 import Dashboard from "@/components/admin/Dashboard";
 import AdminLayout from "@/layout/AdminLayout";
 import Layout from "@/layout/Layout";
+import ChooseRole from "@/pages/auth/ChooseRole";
+import CoachSignUp from "@/pages/auth/CoachSignUp";
+import RunnerSignUp from "@/pages/auth/RunnerSignUp";
+import SignIn from "@/pages/auth/SignIn";
 import Home from "@/pages/home/Home";
 
 
@@ -14,6 +18,22 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/sign-in",
+        element: <SignIn/>,
+      },
+      {
+        path: "/choose-role",
+        element: <ChooseRole/>,
+      },
+      {
+        path: "/runner-sign-up",
+        element: <RunnerSignUp/>,
+      },
+      {
+        path: "/coach-sign-up",
+        element: <CoachSignUp/>,
       },
 
     ],
