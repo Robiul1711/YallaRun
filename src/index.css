@@ -360,3 +360,46 @@ iframe.goog-te-banner-frame {
 button {
   cursor: pointer !important;
 }
+
+.custom-select .ant-select-selector {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 16px !important;
+}
+
+.custom-select .ant-select-selection-placeholder {
+  color: #747474 !important; /* placeholder color */
+}
+
+.custom-select .ant-select-selection-item {
+  color: #111 !important; /* selected text color */
+ 
+}
+
+/* Target AntD DatePicker inside your wrapper class */
+.ant-picker-outlined {
+  background-color: transparent !important; /* transparent bg */
+  border: none !important; /* no border */
+  box-shadow: none !important; /* remove shadow */
+  border-radius: 12px; /* rounded corners */
+  
+}
+
+/* Input text color */
+.ant-picker-input > input {
+  color: #111 !important; /* text color */
+  font-size: 16px !important;
+  background-color: transparent;
+}
+
+/* Placeholder color */
+.ant-picker-input > input::placeholder {
+  color: #747474 !important;
+}
+
+/* Optional: hide the border when focused */
+.ant-picker-focused {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}

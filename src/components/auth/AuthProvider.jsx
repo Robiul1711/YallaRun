@@ -4,12 +4,12 @@ import { Title18, Title20, Title40 } from "../common/Title";
 import { Link } from "react-router-dom";
 const AuthProvider = ({ className, children, sectionImage, title, text }) => {
   return (
-    <div className={` ${className} overflow-hidden h-screen flex w-full`}>
-      <div className=" w-1/2 h-full  ">
-        <img src={sectionImage} className=" " />
+    <div className={` ${className} h-auto flex w-full`}>
+      <div className=" w-1/2  ">
+        <img src={sectionImage} className="  " />
       </div>
 
-      <div className=" w-1/2 flex justify-center items-center h-full section-padding-x">
+      <div className=" w-1/2 mt-8 flex justify-center items-center h-full section-padding-x">
         <div  className=" flex flex-col gap-10 w-[700px] ">
           <Link to={`/`}>
           <img src={AuthLogo} className=" w-[188px] h-auto block" />

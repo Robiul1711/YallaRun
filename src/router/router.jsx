@@ -3,6 +3,9 @@ import AdminLayout from "@/layout/AdminLayout";
 import Layout from "@/layout/Layout";
 import ChooseRole from "@/pages/auth/ChooseRole";
 import CoachSignUp from "@/pages/auth/CoachSignUp";
+import ForgotPassword from "@/pages/auth/ForgotPassword";
+import OTPPage from "@/pages/auth/OTPPage";
+import PasswordReset from "@/pages/auth/PasswordReset";
 import RunnerSignUp from "@/pages/auth/RunnerSignUp";
 import SignIn from "@/pages/auth/SignIn";
 import Home from "@/pages/home/Home";
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
       {
         path: "/runner-sign-up",
         element: <RunnerSignUp/>,
+      },
+      {
+        path: "/forgot-password",
+        element: <ForgotPassword/>,
+      },
+      {
+        path: "/otp-page",
+        element: <OTPPage/>,
+      },
+      {
+        path: "/password-reset",
+        element: <PasswordReset/>,
       },
       {
         path: "/coach-sign-up",

@@ -28,7 +28,7 @@ const SignIn = () => {
           <CommonInputWrapper
             icon={<EmailIcon />}
             type="email"
-            label="Email Id"
+            label="Email"
             register_as="email"
             register={register}
             placeholder="Enter your email"
@@ -79,7 +79,7 @@ const SignIn = () => {
 
           <div className=" flex items-center justify-center gap-3">
             <Title18 className={`!text-[#404040] !font-normal`}>
-              Already have an account?
+         Don’t have an account? 
             </Title18>
 
             <Link to={`/choose-role`} className="">
