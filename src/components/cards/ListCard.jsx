@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 const ListCard = ({ item }) => {
   return (
     <Link to={`#`} className="bg-[#E6EEEE] rounded-[32px] p-6 flex gap-6 w-full group duration-200 hover:bg-secondaryColor">
-      <div className=" w-1/2 H-[352PX] rounded-xl duration-200 overflow-hidden">
-        <img src={item?.image} className=" w-full h-auto block rounded-xl group-hover:scale-105 duration-200" />
+      <div className=" w-1/2 h-[352px] rounded-xl duration-200 overflow-hidden">
+        <img src={item?.image} className=" w-full h-full object-cover block rounded-xl group-hover:scale-105 duration-200" />
       </div>
       <div className="w-1/2 flex flex-col gap-3 justify-between">
       <div className=" flex flex-col gap-4">
