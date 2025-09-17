@@ -7,6 +7,15 @@ export const Title32 = ({ className, children }) => {
     </p>
   );
 };
+export const Title48 = ({ className, children }) => {
+  return (
+    <p
+      className={` ${className} text-[48px] text-customBlack leading-[48px] font-semibold `}
+    >
+      {children}
+    </p>
+  );
+};
 export const Title24 = ({ className, children }) => {
   return (
     <p
@@ -47,6 +56,15 @@ export const Title40 = ({ className, children }) => {
   return (
     <p
       className={` ${className} text-[40px] text-customBlack leading-[60px] font-bold `}
+    >
+      {children}
+    </p>
+  );
+};
+export const Title14 = ({ className, children }) => {
+  return (
+    <p
+      className={` ${className} text-[14px] text-white leading-[20px] font-normal `}
     >
       {children}
     </p>

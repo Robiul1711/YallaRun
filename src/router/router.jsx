@@ -1,6 +1,7 @@
 import Dashboard from "@/components/admin/Dashboard";
 import AdminLayout from "@/layout/AdminLayout";
 import Layout from "@/layout/Layout";
+import AboutPage from "@/pages/about/AboutPage";
 import ChooseRole from "@/pages/auth/ChooseRole";
 import CoachSignUp from "@/pages/auth/CoachSignUp";
 import ForgotPassword from "@/pages/auth/ForgotPassword";
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
       },
       {
         path: "/sign-in",

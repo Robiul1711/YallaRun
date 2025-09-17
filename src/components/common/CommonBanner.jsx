@@ -3,7 +3,7 @@ import React from "react";
 const CommonBanner = ({ children, bannerImage }) => {
   return (
     <div
-      className="relative w-full h-[800px] bg-cover bg-center bg-no-repeat"
+      className="relative w-full section-padding-x h-[800px] bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bannerImage})` }} // if using Next.js image imports
     >
       {/* Overlay */}
