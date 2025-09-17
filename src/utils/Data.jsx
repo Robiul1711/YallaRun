@@ -79,6 +79,17 @@ import { RxAvatar } from "react-icons/rx";
 import L1 from "@/assets/images/l1.png";
 import L2 from "@/assets/images/l2.png";
 import L3 from "@/assets/images/l3.png";
+import Article1 from "@/assets/images/article1.png";
+import Article2 from "@/assets/images/article2.png";
+import Article3 from "@/assets/images/article3.png";
+import avatar from "@/assets/images/avatar.png";
+import Coach1 from "@/assets/images/coach1.png";
+import Coach2 from "@/assets/images/coach2.png";
+import W1 from "@/assets/images/w1.png";
+import W2 from "@/assets/images/w2.png";
+import W3 from "@/assets/images/w3.png";
+import W4 from "@/assets/images/w4.png";
+import W6 from "@/assets/images/w6.png";
 
 export const aboutHomeData = [
   {
@@ -149,3 +160,139 @@ export const upcommingMerathon = [
     cost: "free",
   },
 ];
+
+export const latestArticles = [
+  {
+    id: 1,
+    image: Article1,
+    title: "5 Morning Habits Every Runner Should Try",
+    category: "Event Highlights & Recaps",
+    user_name: "Jerry Helfer",
+    date: "Aug 20, 2025",
+    avatar: avatar,
+    likes: 133,
+    comments: 12,
+  },
+  {
+    id: 2,
+    image: Article2,
+    title: "5 Morning Habits Every Runner Should Try",
+    category: "Event Highlights & Recaps",
+    user_name: "Jerry Helfer",
+    date: "Aug 20, 2025",
+    avatar: avatar,
+    likes: 133,
+    comments: 12,
+  },
+  {
+    id: 3,
+    image: Article3,
+    title: "5 Morning Habits Every Runner Should Try",
+    category: "Event Highlights & Recaps",
+    user_name: "Jerry Helfer",
+    date: "Aug 20, 2025",
+    avatar: avatar,
+    likes: 133,
+    comments: 12,
+  },
+];
+
+
+export const coachData= [
+  {
+    id:1,
+    image:Coach1,
+    name:"Ali Ahmed",
+    category:"Speed & Endurance Coaching",
+    location:"Abu Dhabi, UAE"
+  },
+  {
+    id:2,
+    image:Coach2,
+    name:"Ali Ahmed",
+    category:"Speed & Endurance Coaching",
+    location:"Abu Dhabi, UAE"
+  },
+  {
+    id:3,
+    image:Coach2,
+    name:"Ali Ahmed",
+    category:"Speed & Endurance Coaching",
+    location:"Abu Dhabi, UAE"
+  },
+  {
+    id:4,
+    image:Coach1,
+    name:"Ali Ahmed",
+    category:"Speed & Endurance Coaching",
+    location:"Abu Dhabi, UAE"
+  },
+]
+
+export const price =[
+  {
+    id:1,
+    plan_name:"Free Plan",
+    price:0.00,
+    sub_text:"Start your run, no cost attached",
+    advantage:["Browse Articles (6–8 at start, 2/week) ,View Running Events list" ,"See Sponsor Ads" ,"No subscription box","No Premium Merchandise" ]
+  },
+  {
+    id:2,
+    plan_name:"Standard Plan",
+    price:55,
+    offer_price:20,
+    offer_limit:"for 3 month",
+    sub_text:"Train smarter, go further.",
+    advantage:["Everything in Free ,Weekly content updates" ,"Early access to Event updates" ,"Sponsor offers & discounts"," No Subscription Box" ]
+  },
+  {
+    id:3,
+    plan_name:"Standard Plan",
+    price:110,
+    offer_price:15,
+    offer_limit:" for 3 month",
+    sub_text:"Run. Connect. Elevate – with exclusive perks",
+    advantage:["Everything in Standard Plan ,Monthly Personalized Subscription Box" ,"Monthly Personalized Subscription Boxs" ,"Sponsor offers & discounts"," Exclusive merchandise (running gear, T-shirts, etc.)" ]
+  },
+]
+
+export const whatYouDo =[
+  {
+    id:1,
+    iconImage:W1,
+    title:"Discover & Learn",
+    desc:"Stay updated with articles, weekly stories, and expert insights to improve your running journey.",
+  },
+  {
+    id:2,
+    iconImage:W2,
+    title:"Connect with Experts",
+    desc:"Find certified coaches, view their profiles, and get guidance tailored to your needs.",
+  },
+  {
+    id:3,
+    iconImage:W3,
+    title:"Join Exciting Runs",
+    desc:"Track UAE’s marathons, trail runs, and community events to participate and stay active.",
+  },
+  {
+    id:4,
+    iconImage:W4,
+    title:"Join Exciting Runs",
+    desc:"Track UAE’s marathons, trail runs, and community events to participate and stay active.",
+  },
+  {
+    id:5,
+    iconImage:W1,
+    title:"Support from Leading Brands",
+    desc:"Discover exclusive offers and spotlights from trusted running and sports sponsors.",
+  },
+  {
+    id:6,
+    iconImage:W6,
+    title:"Community Hub",
+    desc:"Connect with fellow runners, share achievements, and participate in group challenges",
+  },
+]
+

@@ -24,12 +24,12 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <header className={`section-padding-x fixed top-10 z-[200] w-full `}>
+    <header className={`${scrolled ?"fixed top-0 z-[200]":"section-padding-x fixed top-10 z-[200]"}  w-full `}>
       <div
-        className={`w-full px-12 rounded-[120px] flex items-center justify-between gap-5 transition-all duration-500 ${
+        className={`w-full px-12  flex items-center justify-between gap-5 transition-all duration-500 ${
           scrolled
-            ? "bg-[rgba(56,71,21,0.85)] backdrop-blur-md py-4"
-            : "bg-[rgba(56,71,21,0.25)] py-6"
+            ? "bg-[rgba(56,71,21,0.45)] backdrop-blur-md py-4"
+            : "bg-[rgba(56,71,21,0.25)] py-6 rounded-[120px]"
         }`}
       >
         <Link to={`/`} className="w-[188px] h-[52px]">
@@ -43,8 +43,8 @@ const Navbar = () => {
               className={
                 ({ isActive }) =>
                   isActive
-                    ? "text-white font-semibold text-lg" // class when active
-                    : "text-[#111] font-medium text-lg" // class when not active
+                    ? "text-primaryColor font-semibold text-lg" // class when active
+                    : "text-white font-medium text-lg" // class when not active
               }
             >
               {item?.name}
