@@ -35,11 +35,6 @@ export const navLinks = [
     path: "/contact",
   },
   {
-    id: 8,
-    name: "Contact",
-    path: "/contact",
-  },
-  {
     id: 9,
     name: "Magazine",
     path: "/magazine",
@@ -197,102 +192,236 @@ export const latestArticles = [
   },
 ];
 
+export const coachData = [
+  {
+    id: 1,
+    image: Coach1,
+    name: "Ali Ahmed",
+    category: "Speed & Endurance Coaching",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    id: 2,
+    image: Coach2,
+    name: "Ali Ahmed",
+    category: "Speed & Endurance Coaching",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    id: 3,
+    image: Coach2,
+    name: "Ali Ahmed",
+    category: "Speed & Endurance Coaching",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    id: 4,
+    image: Coach1,
+    name: "Ali Ahmed",
+    category: "Speed & Endurance Coaching",
+    location: "Abu Dhabi, UAE",
+  },
+];
 
-export const coachData= [
+export const price = [
   {
-    id:1,
-    image:Coach1,
-    name:"Ali Ahmed",
-    category:"Speed & Endurance Coaching",
-    location:"Abu Dhabi, UAE"
+    id: 1,
+    plan_name: "Free Plan",
+    price: 0.0,
+    sub_text: "Start your run, no cost attached",
+    advantage: [
+      "Browse Articles (6–8 at start, 2/week) ,View Running Events list",
+      "See Sponsor Ads",
+      "No subscription box",
+      "No Premium Merchandise",
+    ],
   },
   {
-    id:2,
-    image:Coach2,
-    name:"Ali Ahmed",
-    category:"Speed & Endurance Coaching",
-    location:"Abu Dhabi, UAE"
+    id: 2,
+    plan_name: "Standard Plan",
+    price: 55,
+    offer_price: 20,
+    offer_limit: "for 3 month",
+    sub_text: "Train smarter, go further.",
+    advantage: [
+      "Everything in Free ,Weekly content updates",
+      "Early access to Event updates",
+      "Sponsor offers & discounts",
+      " No Subscription Box",
+    ],
   },
   {
-    id:3,
-    image:Coach2,
-    name:"Ali Ahmed",
-    category:"Speed & Endurance Coaching",
-    location:"Abu Dhabi, UAE"
+    id: 3,
+    plan_name: "Standard Plan",
+    price: 110,
+    offer_price: 15,
+    offer_limit: " for 3 month",
+    sub_text: "Run. Connect. Elevate – with exclusive perks",
+    advantage: [
+      "Everything in Standard Plan ,Monthly Personalized Subscription Box",
+      "Monthly Personalized Subscription Boxs",
+      "Sponsor offers & discounts",
+      " Exclusive merchandise (running gear, T-shirts, etc.)",
+    ],
   },
-  {
-    id:4,
-    image:Coach1,
-    name:"Ali Ahmed",
-    category:"Speed & Endurance Coaching",
-    location:"Abu Dhabi, UAE"
-  },
-]
+];
 
-export const price =[
+export const whatYouDo = [
   {
-    id:1,
-    plan_name:"Free Plan",
-    price:0.00,
-    sub_text:"Start your run, no cost attached",
-    advantage:["Browse Articles (6–8 at start, 2/week) ,View Running Events list" ,"See Sponsor Ads" ,"No subscription box","No Premium Merchandise" ]
+    id: 1,
+    iconImage: W1,
+    title: "Discover & Learn",
+    desc: "Stay updated with articles, weekly stories, and expert insights to improve your running journey.",
   },
   {
-    id:2,
-    plan_name:"Standard Plan",
-    price:55,
-    offer_price:20,
-    offer_limit:"for 3 month",
-    sub_text:"Train smarter, go further.",
-    advantage:["Everything in Free ,Weekly content updates" ,"Early access to Event updates" ,"Sponsor offers & discounts"," No Subscription Box" ]
+    id: 2,
+    iconImage: W2,
+    title: "Connect with Experts",
+    desc: "Find certified coaches, view their profiles, and get guidance tailored to your needs.",
   },
   {
-    id:3,
-    plan_name:"Standard Plan",
-    price:110,
-    offer_price:15,
-    offer_limit:" for 3 month",
-    sub_text:"Run. Connect. Elevate – with exclusive perks",
-    advantage:["Everything in Standard Plan ,Monthly Personalized Subscription Box" ,"Monthly Personalized Subscription Boxs" ,"Sponsor offers & discounts"," Exclusive merchandise (running gear, T-shirts, etc.)" ]
+    id: 3,
+    iconImage: W3,
+    title: "Join Exciting Runs",
+    desc: "Track UAE’s marathons, trail runs, and community events to participate and stay active.",
   },
-]
+  {
+    id: 4,
+    iconImage: W4,
+    title: "Join Exciting Runs",
+    desc: "Track UAE’s marathons, trail runs, and community events to participate and stay active.",
+  },
+  {
+    id: 5,
+    iconImage: W1,
+    title: "Support from Leading Brands",
+    desc: "Discover exclusive offers and spotlights from trusted running and sports sponsors.",
+  },
+  {
+    id: 6,
+    iconImage: W6,
+    title: "Community Hub",
+    desc: "Connect with fellow runners, share achievements, and participate in group challenges",
+  },
+];
 
-export const whatYouDo =[
+export const eventTypes = [
+  { id: 1, label: "Riding Competition", value: "Riding Competition" },
+  { id: 2, label: "Horse Care Workshop", value: "Horse Care Workshop" },
+  { id: 3, label: "Training Clinic", value: "Training Clinic" },
+  { id: 4, label: "Equestrian Expo", value: "Equestrian Expo" },
+  { id: 5, label: "Fundraising Gala", value: "Fundraising Gala" },
+  { id: 6, label: "Trail Ride Meetup", value: "Trail Ride Meetup" },
+  { id: 7, label: "Breeding Seminar", value: "Breeding Seminar" },
+  { id: 8, label: "Show Jumping Tournament", value: "Show Jumping Tournament" },
   {
-    id:1,
-    iconImage:W1,
-    title:"Discover & Learn",
-    desc:"Stay updated with articles, weekly stories, and expert insights to improve your running journey.",
+    id: 9,
+    label: "Veterinary Awareness Camp",
+    value: "Veterinary Awareness Camp",
   },
-  {
-    id:2,
-    iconImage:W2,
-    title:"Connect with Experts",
-    desc:"Find certified coaches, view their profiles, and get guidance tailored to your needs.",
-  },
-  {
-    id:3,
-    iconImage:W3,
-    title:"Join Exciting Runs",
-    desc:"Track UAE’s marathons, trail runs, and community events to participate and stay active.",
-  },
-  {
-    id:4,
-    iconImage:W4,
-    title:"Join Exciting Runs",
-    desc:"Track UAE’s marathons, trail runs, and community events to participate and stay active.",
-  },
-  {
-    id:5,
-    iconImage:W1,
-    title:"Support from Leading Brands",
-    desc:"Discover exclusive offers and spotlights from trusted running and sports sponsors.",
-  },
-  {
-    id:6,
-    iconImage:W6,
-    title:"Community Hub",
-    desc:"Connect with fellow runners, share achievements, and participate in group challenges",
-  },
-]
+  { id: 10, label: "Horse Auction", value: "Horse Auction" },
+];
 
+export const articleFilters = [
+  {
+    id: 1,
+    label: "All",
+  },
+  {
+    id: 2,
+    label: "Event Highlights & Recapsg",
+  },
+  {
+    id: 3,
+    label: "Nutrition & Lifestyle",
+  },
+  {
+    id: 4,
+    label: "Training & Tips",
+  },
+];
+
+import { MdEmail } from "react-icons/md";
+import { MdOutlinePhone } from "react-icons/md";
+import Magazine from "@/assets/images/magazine.png";
+import demoPdf from "@/assets/pdf/demo.pdf";
+
+export const ContactData = [
+  {
+    id: 1,
+    icon: MdEmail,
+    label: "You can Email Me Here",
+    text: "support@yallarun.com",
+  },
+  {
+    id: 2,
+    icon: MdOutlinePhone,
+    label: "Give Me a Call on",
+    text: "(303) 420-4261",
+  },
+  {
+    id: 3,
+    icon: MdOutlinePhone,
+    label: "Location",
+    text: "184 Griffin Street, Gilbert, AZ 85233",
+  },
+];
+
+export const magazineData = [
+  {
+    id: 1,
+    image: Magazine,
+    pdf: demoPdf,
+    title: "The Finish Line",
+    date: "Sep 5, 2025",
+  },
+  {
+    id: 2,
+    image: Magazine,
+    pdf: demoPdf,
+    title: "The Finish Line",
+    date: "Sep 5, 2025",
+  },
+  {
+    id: 3,
+    image: Magazine,
+    pdf: demoPdf,
+    title: "The Finish Line",
+    date: "Sep 5, 2025",
+  },
+  {
+    id: 4,
+    image: Magazine,
+    pdf: demoPdf,
+    title: "The Finish Line",
+    date: "Sep 5, 2025",
+  },
+  {
+    id: 5,
+    image: Magazine,
+    pdf: demoPdf,
+    title: "The Finish Line",
+    date: "Sep 5, 2025",
+  },
+  {
+    id: 6,
+    image: Magazine,
+    pdf: demoPdf,
+    title: "The Finish Line",
+    date: "Sep 5, 2025",
+  },
+  {
+    id: 7,
+    image: Magazine,
+    pdf: demoPdf,
+    title: "The Finish Line",
+    date: "Sep 5, 2025",
+  },
+  {
+    id: 8,
+    image: Magazine,
+    pdf: demoPdf,
+    title: "The Finish Line",
+    date: "Sep 5, 2025",
+  },
+];
