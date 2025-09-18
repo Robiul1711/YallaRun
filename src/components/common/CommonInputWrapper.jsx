@@ -27,18 +27,18 @@ const CommonInputWrapper = ({
   } rounded-[12px] flex items-center gap-2`;
 
   const commonInputField = `w-full md:text-base text-[14px] border-none placeholder-[#747474] outline-none bg-transparent text-[#111] ${
-    type === "textarea" && "h-[50px]"
+    type === "textarea" && "h-[80px]"
   }`;
 
   const [show, setShow] = useState(false);
 
-  const handleSelectChange = (value) => {
-    setValue(register_as, value, { shouldValidate: true });
-  };
+  // const handleSelectChange = (value) => {
+  //   setValue(register_as, value, { shouldValidate: true });
+  // };
 
-  const handleDateChange = (value) => {
-    setValue(register_as, value, { shouldValidate: true });
-  };
+  // const handleDateChange = (value) => {
+  //   setValue(register_as, value, { shouldValidate: true });
+  // };
 
   useEffect(() => {
     if (register && register_as) {
@@ -104,6 +104,7 @@ const CommonInputWrapper = ({
         {type === "select" && options && (
           <Controller
             name={register_as}
+            control={control} 
             render={({ field }) => (
               <Select
                 {...field}

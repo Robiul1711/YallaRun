@@ -105,3 +105,20 @@ export const SendIcon =({className})=>{
 </svg>
 
 }
+
+export const PrevIcon =({className})=>{
+  return <svg className={className} xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+  <path d="M11.6222 7.2221L10.3779 5.97778L5.35571 10.9999L10.3779 16.0221L11.6222 14.7778L7.84435 10.9999L11.6222 7.2221Z" fill="#22303E" fillOpacity="0.4"/>
+  <path d="M14.7778 5.97778L9.75562 10.9999L14.7778 16.0221L16.0221 14.7778L12.2443 10.9999L16.0221 7.2221L14.7778 5.97778Z" fill="#22303E" fillOpacity="0.4"/>
+</svg>
+}
+
+export const NextIcon =({className})=>{
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+  <path d="M10.3546 7.06754L14.3192 11L10.3546 14.9325L11.6453 16.2342L16.9225 11L11.6453 5.76587L10.3546 7.06754Z" fill="#22303E" fillOpacity="0.9"/>
+  <path d="M7.06191 5.76587L5.77124 7.06754L9.73582 11L5.77124 14.9325L7.06191 16.2342L12.3392 11L7.06191 5.76587Z" fill="#22303E" fillOpacity="0.9"/>
+</svg>
+  )
+
+}

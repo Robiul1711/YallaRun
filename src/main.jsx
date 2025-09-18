@@ -8,7 +8,12 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import AuthProvider from "./providers/AuthProvider";
 import AllValueProvider from "./providers/AllValueProvider";
 const queryClient = new QueryClient();
+import { pdfjs } from "react-pdf";
 
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
