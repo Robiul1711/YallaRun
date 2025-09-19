@@ -3,6 +3,7 @@ import AdminLayout from "@/layout/AdminLayout";
 import Layout from "@/layout/Layout";
 import AboutPage from "@/pages/about/AboutPage";
 import ArticlePage from "@/pages/article/ArticlePage";
+import ArticleDetails from "@/pages/articleDetails/ArticleDetails";
 import ChooseRole from "@/pages/auth/ChooseRole";
 import CoachSignUp from "@/pages/auth/CoachSignUp";
 import ForgotPassword from "@/pages/auth/ForgotPassword";
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/articles",
         element: <ArticlePage/>,
+      },
+      {
+        path: "/article/:id",
+        element: <ArticleDetails/>,
       },
       {
         path: "/coaches",

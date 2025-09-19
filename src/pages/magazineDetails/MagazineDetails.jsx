@@ -59,8 +59,8 @@ const MagazineDetails = () => {
 
       {/* FlipBook */}
       <HTMLFlipBook
-        width={400}
-        height={500}
+        width={600}
+        height={600}
         ref={flipBook}
         onFlip={() =>
           setCurrentPage(flipBook.current?.pageFlip().getCurrentPageIndex() || 0)
