@@ -425,3 +425,73 @@ export const magazineData = [
     date: "Sep 5, 2025",
   },
 ];
+
+export const eventPreferences = [
+  { id: 1, label: "Workshops", value: "Workshops" },
+  { id: 2, label: "Competitions", value: "Competitions" },
+  { id: 3, label: "Training Clinics", value: "Training Clinics" },
+  { id: 4, label: "Trail Rides", value: "Trail Rides" },
+  { id: 5, label: "Community Meetups", value: "Community Meetups" },
+  { id: 6, label: "Horse Shows", value: "Horse Shows" },
+  { id: 7, label: "Charity Events", value: "Charity Events" },
+  { id: 8, label: "Educational Seminars", value: "Educational Seminars" },
+];
+
+export const tShirtSizes = [
+  { id: 1, label: "XS",  value: "XS" },
+  { id: 2, label: "S",   value: "S" },
+  { id: 3, label: "M",   value: "M" },
+  { id: 4, label: "L",   value: "L" },
+  { id: 5, label: "XL",  value: "XL" },
+  { id: 6, label: "XXL", value: "XXL" },
+  { id: 7, label: "XXXL", value: "XXXL" }, // optional extra-large
+];
+
+export const areasOfExpertise = [
+  { id: 1, label: "Web Development", value: "Web Development" },
+  { id: 2, label: "Mobile App Development", value: "Mobile App Development" },
+  { id: 3, label: "UI/UX Design", value: "UI/UX Design" },
+  { id: 4, label: "Data Science", value: "Data Science" },
+  { id: 5, label: "Machine Learning", value: "Machine Learning" },
+  { id: 6, label: "Cloud Computing", value: "Cloud Computing" },
+  { id: 7, label: "Cybersecurity", value: "Cybersecurity" },
+  { id: 8, label: "Project Management", value: "Project Management" },
+];
+
+export const availabilityOptions = [
+  { id: 1, label: "Full-Time",   value: "Full-Time" },
+  { id: 2, label: "Part-Time",   value: "Part-Time" },
+  { id: 3, label: "Weekdays",    value: "Weekdays" },
+  { id: 4, label: "Weekends",    value: "Weekends" },
+  { id: 5, label: "Evenings",    value: "Evenings" },
+  { id: 6, label: "Mornings",    value: "Mornings" },
+  { id: 7, label: "Flexible",    value: "Flexible" },
+  { id: 8, label: "On-Call",     value: "On-Call" },
+];
+
+export const allComments = [
+    {
+      id: 1,
+      name: "Autumn Phillips",
+      date: "5 Aug, 2025",
+      avatar: "https://i.pravatar.cc/48?img=5",
+      text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
+    },
+    {
+      id: 2,
+      name: "Autumn Phillips",
+      date: "5 Aug, 2025",
+      avatar: "https://i.pravatar.cc/48?img=5",
+      text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
+    },
+    {
+      id: 3,
+      name: "Autumn Phillips",
+      date: "5 Aug, 2025",
+      avatar: "https://i.pravatar.cc/48?img=5",
+      text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
+    },
+  ];
+
+
+

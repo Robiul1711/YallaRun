@@ -20,10 +20,10 @@ const CommonInputWrapper = ({
   multiple,
   control,
 }) => {
-  const commonInputBox = `w-full border-[1px] border-[#D9E5E6] ${
+  const commonInputBox = `w-full ${type===`radio` ?" !py-1 !px-0":"border-[1px] border-[#D9E5E6] bg-[#F5F5F5]"} ${
     type === "select" || type === "date"
       ? "py-4 px-2 bg-[#F5F5F5]"
-      : "py-5 bg-[#F5F5F5] px-5"
+      : "py-5  px-5"
   } rounded-[12px] flex items-center gap-2`;
 
   const commonInputField = `w-full md:text-base text-[14px] border-none placeholder-[#747474] outline-none bg-transparent text-[#111] ${
