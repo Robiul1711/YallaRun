@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-black text-white pt-10 pb-6">
-      <div className=" section-padding-x mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
+      <div className=" section-padding-x mx-auto px-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-0">
         {/* Left Section */}
-        <div className="flex flex-col max-w-[395px] gap-2 md:w-1/3">
+        <div className="flex flex-col max-w-[395px] gap-2 lg:w-1/3">
           <img src={footerLogo} alt="YALLARUN" className="w-[174px]" />
           <p className="text-gray-400 text-sm">
             Inspiring runners of all levels through content, events, coaching,
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         {/* Center Navigation */}
-        <div className="flex gap-6 md:gap-8 text-gray-300 text-sm w-full justify-center items-center">
+        <div className="flex gap-4 lg:gap-8 text-gray-300 text-sm w-full lg:justify-center lg:items-center flex-wrap">
           <Link to="#home" className="hover:text-white transition-colors">
             Home
           </Link>
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         {/* Right Social Icons */}
-        <div className="flex gap-4 md:w-1/4 justify-start md:justify-end text-gray-400">
+        <div className="flex gap-4 md:w-1/4 justify-start lg:justify-end text-gray-400">
           <a
             href="#"
             className="hover:text-white transition-colors p-2 bg-white rounded-full"

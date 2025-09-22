@@ -13,15 +13,15 @@ const ListCard = ({ item }) => {
     <>
       <Link
         to={`#`}
-        className="bg-[#E6EEEE] rounded-[32px] p-6 flex gap-6 w-full group duration-200 hover:bg-secondaryColor"
+        className="bg-[#E6EEEE] rounded-[32px] xlg:p-6 p-2.5 flex xlg:flex-row flex-col xlg:gap-6 gap-2.5 w-full group duration-200 hover:bg-secondaryColor"
       >
-        <div className=" w-1/2 h-[352px] rounded-xl duration-200 overflow-hidden">
+        <div className=" xlg:w-1/2 w-full h-[352px] rounded-xl duration-200 overflow-hidden">
           <img
             src={item?.image}
             className=" w-full h-full object-cover block rounded-xl group-hover:scale-105 duration-200"
           />
         </div>
-        <div className="w-1/2 flex flex-col gap-3 justify-between">
+        <div className="xlg:w-1/2 w-full flex flex-col gap-3 justify-between">
           <div className=" flex flex-col gap-4">
             <div className=" flex flex-col gap-2">
               <Title24
@@ -114,7 +114,7 @@ const ListCard = ({ item }) => {
         // onOk={() => setModalOpen(false)}
         onCancel={() => setModalOpen(false)}
       >
-        <EventRegistration/>
+        <EventRegistration />
       </Modal>
     </>
   );

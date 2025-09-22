@@ -45,7 +45,7 @@ const Step3 = () => {
 
   return (
     <StepArea name="Upload your photo and secure your account.">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col lg:gap-8 gap-4">
         {/* Upload Photo */}
         <div className="flex flex-col gap-3">
           <Title20 className="!text-customBlack !font-normal">
@@ -53,11 +53,11 @@ const Step3 = () => {
           </Title20>
 
           {preview ? (
-            <div className="relative w-[112px] h-[112px]">
+            <div className="relative lg:w-[112px] w-[80px] lg:h-[112px] h-[80px]">
               <img
                 src={preview}
                 alt="preview"
-                className="w-[112px] h-[112px] rounded-full object-cover border border-[#303030]"
+                className=" w-full h-full rounded-full object-cover border border-[#303030]"
               />
               <button
                 type="button"

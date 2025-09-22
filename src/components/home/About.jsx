@@ -7,11 +7,11 @@ import HomeAboutCards from "../cards/HomeAboutCards";
 
 const About = () => {
   return (
-    <div className=" section-padding-x section-padding-y w-full flex gap-8">
-      <div className=" w-[45%] ">
-        <img src={AboutImage} className=" w-full h-full object-cover" />
+    <div className=" section-padding-x section-padding-y w-full flex xmd:flex-row flex-col-reverse gap-8">
+      <div className="w-full max-w-[500px] mx-auto xmd:max-w-[45%]">
+        <img src={AboutImage} className="w-full h-full object-cover" />
       </div>
-      <div className="  w-[55%] flex flex-col gap-8">
+      <div className="  xmd:!w-[55%] w-full flex flex-col xlg:gap-8 gap-4">
         <div className=" flex items-center gap-2">
           <img src={RunnerIcon} className=" w-6 h-6 object-cover" />
           <Title20 className={`!text-secondaryColor !font-semibold`}>
@@ -29,7 +29,7 @@ const About = () => {
           </p>
         </Title32>
 
-        <div className=" grid grid-cols-2 gap-6">
+        <div className=" grid sm:grid-cols-2 lg:gap-6 gap-3">
           {aboutHomeData?.map((item, index) => (
             <HomeAboutCards item={item} key={index} />
           ))}

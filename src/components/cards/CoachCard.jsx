@@ -1,12 +1,14 @@
 import React from "react";
 import { Title16, Title18, Title24 } from "../common/Title";
 import { IoLocationOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const CoachCard = ({ item }) => {
   return (
-    <div
+    <Link
+    to={`/coach/${item?.id}`}
       className="
-        group relative h-[450px] w-full rounded-[24px]
+        group relative lg:h-[450px] h-[350px] w-full rounded-[24px]
         overflow-hidden cursor-pointer
         transition-transform duration-500 ease-out
         hover:scale-[1.03]
@@ -17,7 +19,7 @@ const CoachCard = ({ item }) => {
         src={item?.image}
         alt={item?.name || "Coach"}
         className="
-          w-full h-full object-cover rounded-[24px]
+          w-full h-full object-fill rounded-[24px]
           transition-transform duration-500 ease-out
           group-hover:scale-105
         "
@@ -54,7 +56,7 @@ const CoachCard = ({ item }) => {
           </Title16>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

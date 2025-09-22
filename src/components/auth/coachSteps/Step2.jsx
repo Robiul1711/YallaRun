@@ -14,7 +14,7 @@ const Step2 = () => {
   } = useFormContext();
   return (
     <StepArea name={`Add your contact details and social profiles.`}>
-      <div className=" flex flex-col gap-6">
+      <div className=" flex flex-col lg:gap-6 gap-3">
         <CommonInputWrapper
           type="email"
           label="Email"

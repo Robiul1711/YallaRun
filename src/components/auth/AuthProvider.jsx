@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 const AuthProvider = ({ className, children, sectionImage, title, text }) => {
   return (
     <div className={` ${className} h-auto flex w-full`}>
-      <div className=" w-1/2  ">
+      <div className=" w-1/2 xlg:flex hidden   ">
         <img src={sectionImage} className="  " />
       </div>
 
-      <div className=" w-1/2 mt-8 flex justify-center items-center h-full section-padding-x">
-        <div  className=" flex flex-col gap-10 w-[700px] ">
+      <div className=" xlg:w-1/2 w-full mt-8 flex justify-center items-center h-full section-padding-x">
+        <div className=" flex flex-col xlg:gap-10 gap-4 w-[700px] ">
           <Link to={`/`}>
-          <img src={AuthLogo} className=" w-[188px] h-auto block" />
+            <img src={AuthLogo} className=" w-[188px] h-auto block" />
           </Link>
           <div className=" flex flex-col gap-3">
             <Title40>{title}</Title40>

@@ -3,7 +3,7 @@ import { CiCircleCheck } from "react-icons/ci";
 
 const PriceCard = ({ item }) => {
   return (
-    <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-2xl p-6 flex flex-col justify-between shadow-md hover:shadow-xl transition-shadow duration-300">
+    <div className="lg:max-w-sm lg:mx-auto bg-white border border-gray-200 rounded-2xl xlg:p-6 p-3 flex flex-col justify-between shadow-md hover:shadow-xl transition-shadow duration-300">
       {/* Plan Name */}
       <h2 className="text-2xl font-semibold text-gray-900 mb-2">
         {item?.plan_name}

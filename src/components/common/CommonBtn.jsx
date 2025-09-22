@@ -7,7 +7,7 @@ const CommonBtn = ({ name, path, className }) => {
       to={path}
       className={`
         ${className} 
-        px-6 py-3 rounded-full 
+        xlg:px-6 px-4 xlg:py-3 py-2 rounded-full  whitespace-nowrap
         flex justify-center items-center text-center
         text-white text-lg font-semibold 
         bg-secondaryColor 

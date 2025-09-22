@@ -109,7 +109,7 @@ const LanguageArea = () => {
   };
 
   return (
-    <div className="p-2 bg-white rounded-full gap-2 flex h-[54px] w-[120px] justify-center items-center shadow">
+    <div className="p-2 bg-white rounded-full gap-2 flex md:h-[54px] h-[44px] md:w-[120px] w-[80px] justify-center items-center shadow">
       {/* This is the hidden div where the Google Translate widget is rendered */}
       <div id="google_translate_element" style={{ display: "none" }} />
 
@@ -118,7 +118,7 @@ const LanguageArea = () => {
         translate="no" // Prevents this button from being translated
         type="button"
         onClick={() => changeLanguage("en")}
-        className={`w-[42px] h-[42px] rounded-full flex justify-center items-center text-center aspect-square text-lg transition ${
+        className={`md:w-[42px] w-[32px] md:h-[42px] h-[32px] rounded-full flex justify-center items-center text-center aspect-square md:text-lg text-sm transition ${
           selectedLanguage === "en"
             ? "bg-primaryColor text-customBlack font-semibold" // Active state
             : "bg-gray-200 text-gray-700" // Inactive state
@@ -132,7 +132,7 @@ const LanguageArea = () => {
         translate="no" // Prevents this button from being translated
         type="button"
         onClick={() => changeLanguage("ar")}
-        className={`w-[42px] h-[42px] rounded-full flex justify-center items-center text-center aspect-square text-lg transition ${
+        className={`md:w-[42px] w-[32px] md:h-[42px] h-[32px] rounded-full flex justify-center items-center text-center aspect-square md:text-lg text-sm transition ${
           selectedLanguage === "ar"
             ? "bg-primaryColor text-customBlack font-semibold" // Active state
             : "bg-gray-200 text-gray-700" // Inactive state

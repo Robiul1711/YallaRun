@@ -13,7 +13,7 @@ const ArticleCard = ({ item }) => {
       <img
         src={item?.image}
         alt={item?.title || "Article image"}
-        className="w-full h-[620px] object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+        className="w-full xlg:h-[620px] h-[400px] object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
 
       {/* Overlay Box */}
@@ -21,7 +21,7 @@ const ArticleCard = ({ item }) => {
         className="
           absolute bottom-10 left-1/2 -translate-x-1/2
           bg-[rgba(17,17,17,0.40)] backdrop-blur-xl
-          rounded-[24px] p-5 flex flex-col gap-5
+          rounded-[24px] xlg:p-5 p-2.5 flex flex-col xlg:gap-5 gap-2.5
           w-[90%] max-w-[900px]
           transition-all duration-300
           group-hover:shadow-lg
@@ -66,7 +66,7 @@ const ArticleCard = ({ item }) => {
           <Link
             to={`/article/${item?.id || ""}`}
             className="
-              py-3 px-6 whitespace-nowrap text-center text-white
+              xl:py-3 py-1.5 xl:px-6 px-3 whitespace-nowrap text-center text-white
               flex justify-center items-center rounded-[48px]
               border border-white bg-[rgba(255,255,255,0.15)]
               transition duration-200 ease-in-out
@@ -83,7 +83,7 @@ const ArticleCard = ({ item }) => {
                 <div
                   key={idx}
                   className="
-                    flex items-center gap-2 p-3 rounded-full border border-white
+                    flex items-center gap-2 xl:p-3 p-1.5 rounded-full border border-white
                     bg-[rgba(255,255,255,0.15)] justify-center
                     transition duration-200 ease-in-out
                     hover:bg-white/20 hover:border-white/80

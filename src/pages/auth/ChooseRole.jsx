@@ -34,7 +34,7 @@ const ChooseRole = () => {
             key={item.id}
             type="button"
             onClick={() => setRole(item.id)}
-            className={`w-full text-left p-4 rounded-lg border transition-all flex flex-col
+            className={`w-full text-left lg:p-4 p-2.5 rounded-lg border transition-all flex flex-col
               ${
                 role === item.id
                   ? "border-primaryColor bg-primaryColor/10"
