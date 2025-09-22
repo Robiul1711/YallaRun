@@ -1,5 +1,12 @@
-import Dashboard from "@/components/admin/Dashboard";
-import AdminLayout from "@/layout/AdminLayout";
+import CreateArticle from "@/components/CoachDashboardComponbents/CreateArticle";
+import Dashboard from "@/components/CoachDashboardComponbents/Dashboard";
+import EventParticipations from "@/components/CoachDashboardComponbents/EventParticipations";
+import HelpSupport from "@/components/CoachDashboardComponbents/HelpAndSupportComponents/HelpSupport";
+import MyArticle from "@/components/CoachDashboardComponbents/MyArticle";
+import Setting from "@/components/CoachDashboardComponbents/SettingComponents/Setting";
+import Subscription from "@/components/CoachDashboardComponbents/Subscription";
+import CoachLayout from "@/layout/CoachLayout";
+import AdminLayout from "@/layout/CoachLayout";
 import Layout from "@/layout/Layout";
 import AboutPage from "@/pages/about/AboutPage";
 import ArticlePage from "@/pages/article/ArticlePage";
@@ -102,11 +109,35 @@ const router = createBrowserRouter([
   // Admin routes
   {
     path: "/dashboard",
-    element: <AdminLayout />,
+    element: <CoachLayout />,
     children: [
       {
         path: "/dashboard",
-        element: <Dashboard />, // ✅ Fixed typo
+        element: <Dashboard />
+      },
+      {
+        path: "/dashboard/create-article",
+        element: <CreateArticle />
+      },
+      {
+        path: "/dashboard/my-article",
+        element: <MyArticle />
+      },
+      {
+        path: "/dashboard/event-participations",
+        element: <EventParticipations />
+      },
+      {
+        path: "/dashboard/subscription",
+        element: <Subscription />
+      },
+      {
+        path: "/dashboard/help-support",
+        element: <HelpSupport />
+      },
+      {
+        path: "/dashboard/setting",
+        element: <Setting />
       },
     ],
   },
