@@ -409,3 +409,23 @@ button {
   border-color: transparent !important;
   box-shadow: none !important;
 }
+.swal2-icon-no-border {
+  background: none !important;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.swal2-btn-rounded-full {
+  border-radius: 9999px !important; /* full rounded */
+  padding: 0.5rem 1.5rem !important; /* adjust padding */
+  font-weight: bold !important;
+  color: #9fcc3b !important; /* custom bg color */
+  border: 2px solid #9fcc3b !important; /* text color */
+  background-color: transparent !important; /* transparent bg */  
+  box-shadow: none !important; /* remove shadow */
+}
+.swal2-btn-rounded-full:hover {
+  background-color: #9fcc3b !important; /* custom bg color on hover */
+  color: white !important; /* text color on hover */
+}
