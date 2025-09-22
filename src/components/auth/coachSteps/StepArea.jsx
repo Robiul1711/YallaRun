@@ -3,7 +3,7 @@ import React from "react";
 
 const StepArea = ({ children, className, name }) => {
   return (
-    <div className={`${className} flex flex-col gap-8`}>
+    <div className={`${className} flex flex-col lg:gap-8 gap-4`}>
       <Title24 className={`!text-customBlack !font-medium`}>{name}</Title24>
 
       {children}

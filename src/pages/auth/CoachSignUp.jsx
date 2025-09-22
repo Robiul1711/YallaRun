@@ -30,12 +30,12 @@ const CoachSignUp = () => {
       title="Create Your Coach Profile"
       text="Provide your details to get started as a coach on YallaRun."
     >
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col lg:gap-8 gap-4">
         <ProgressBar step={step} />
         <FormProvider {...methods}>
           <form
             onSubmit={methods.handleSubmit(onSubmit)}
-            className="flex flex-col gap-8"
+            className="flex flex-col lg:gap-8 gap-4"
           >
             <div>
               {step === 1 && <Step1 />}

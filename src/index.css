@@ -223,8 +223,8 @@ body {
 
 @media screen and (min-width: 1460px) {
   .section-padding-x {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 130px;
+    padding-right: 130px;
   }
   .section-padding-y {
     padding-top: 110px;

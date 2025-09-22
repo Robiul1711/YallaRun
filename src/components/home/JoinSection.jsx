@@ -7,10 +7,10 @@ import JoinImage from "@/assets/images/joinImage.png";
 
 const JoinSection = () => {
   return (
-    <div className=" section-padding-x section-padding-y w-full flex h-[600px]  ">
-      <div className=" w-[55%] px-12 py-[80px] bg-primaryColor flex flex-col gap-10 rounded-tl-xl rounded-bl-xl">
+    <div className=" section-padding-x section-padding-y w-full flex xlg:h-[600px]  ">
+      <div className=" md:w-[55%] w-full xlg:px-12 px-6 xlg:py-20 py-10 bg-primaryColor flex flex-col xlg:gap-10 gap-6 rounded-tl-xl rounded-bl-xl">
         <div className=" flex flex-col gap-4">
-          <Title48 className={`!text-white font-[800] !leading-[72px]`}>
+          <Title48 className={`!text-white font-[800] xlg:!leading-[72px] md:!leading-[55px] `}>
             Join the UAE’s Largest Running Community Today!
           </Title48>
 
@@ -34,7 +34,7 @@ const JoinSection = () => {
         </div>
       </div>
 
-      <div className=" w-[45%] rounded-tr-xl rounded-br-xl">
+      <div className=" w-[45%] rounded-tr-xl rounded-br-xl md:flex hidden">
         <img src={JoinImage} className=" w-full h-full object-cover ounded-tr-xl rounded-br-xl" alt="joinImage" loading/>
 
       </div>

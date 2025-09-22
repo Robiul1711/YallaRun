@@ -14,12 +14,12 @@ const ButtonArea = ({ step, setStep, methods }) => {
   };
 
   return (
-    <div>
+    <div className=" mb-4">
       {step === 1 ? (
         <button
           type="button"
           onClick={handleNext}
-          className=" w-full px-4 py-4 rounded-[48px] bg-primaryColor flex justify-center items-center
+          className=" w-full lg:px-4 px-2.5 lg:py-4 py-2.5 lg:rounded-[48px] rounded-xl bg-primaryColor flex justify-center items-center
         transition-all duration-300 ease-out
         hover:bg-primaryColor/90 hover:shadow-md
         active:scale-[0.98]
@@ -32,14 +32,14 @@ const ButtonArea = ({ step, setStep, methods }) => {
           <button
             type="button"
             onClick={handlePrev}
-            className=" px-8 py-3 flex justify-center items-center font-medium rounded-[48px] text-secondaryColor border-[1px] border-secondaryColor"
+            className=" lg:px-8 px-4 lg:py-3 py-2.5 flex justify-center items-center font-medium lg:rounded-[48px] rounded-xl text-secondaryColor border-[1px] border-secondaryColor"
           >
             Back
           </button>
           {step === 4 && (
             <button
               type="submit" // Changed to type="submit" to trigger form submission
-              className=" px-8 py-3 flex justify-center items-center font-medium rounded-[48px] text-customBlack bg-primaryColor"
+              className=" lg:px-8 px-4 lg:py-3 py-2.5 flex justify-center items-center font-medium lg:rounded-[48px] rounded-xl text-customBlack bg-primaryColor"
             >
               Submit for Review
             </button>
@@ -48,7 +48,7 @@ const ButtonArea = ({ step, setStep, methods }) => {
             <button
               type="button"
               onClick={handleNext}
-              className=" px-8 py-3 flex justify-center items-center font-medium rounded-[48px] text-customBlack bg-primaryColor"
+              className=" lg:px-8 px-4 lg:py-3 py-2.5 flex justify-center items-center font-medium lg:rounded-[48px] rounded-xl text-customBlack bg-primaryColor"
             >
               Next
             </button>

@@ -23,8 +23,8 @@ const SignIn = () => {
       title={`Welcome Back, Runner`}
       text={`Log in to track runs, join events, and explore content.`}
     >
-      <form className=" flex flex-col gap-10" onSubmit={handleSubmit(onSubmit)}>
-        <div className=" flex flex-col gap-6 items-start">
+      <form className=" flex flex-col xlg:gap-10 gap-4" onSubmit={handleSubmit(onSubmit)}>
+        <div className=" flex flex-col xlg:gap-6 gap-3.5 items-start">
           <CommonInputWrapper
             icon={<EmailIcon />}
             type="email"
@@ -70,7 +70,7 @@ const SignIn = () => {
         </div>
         <AuthBtn name={`Sign In`} />
 
-        <div className=" flex flex-col gap-6">
+        <div className=" flex flex-col xlg:gap-6 gap-3">
           <div className="flex items-center w-full gap-2">
             <div className="flex-grow border-t border-customBlack"></div>
             <p className="text-center text-customBlack">Or</p>

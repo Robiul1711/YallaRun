@@ -22,12 +22,12 @@ const CommonInputWrapper = ({
 }) => {
   const commonInputBox = `w-full ${type===`radio` ?" !py-1 !px-0":"border-[1px] border-[#D9E5E6] bg-[#F5F5F5]"} ${
     type === "select" || type === "date"
-      ? "py-4 px-2 bg-[#F5F5F5]"
-      : "py-5  px-5"
+      ? "xlg:py-4 py-2 xlg:px-2 px-1 bg-[#F5F5F5]"
+      : "xlg:py-5 py-2.5  xlg:px-5 px-2.5"
   } rounded-[12px] flex items-center gap-2`;
 
-  const commonInputField = `w-full md:text-base text-[14px] border-none placeholder-[#747474] outline-none bg-transparent text-[#111] ${
-    type === "textarea" && "h-[80px]"
+  const commonInputField = `w-full md:text-base text-base border-none placeholder-[#747474] outline-none bg-transparent text-[#111] ${
+    type === "textarea" && "lg:h-[80px] h-[50px]"
   }`;
 
   const [show, setShow] = useState(false);
@@ -51,7 +51,7 @@ const CommonInputWrapper = ({
       {label && (
         <label
           htmlFor={register_as}
-          className="md:text-[20px] text-[14px] font-normal text-[#111]"
+          className="md:text-[20px] text-base font-normal text-[#111]"
         >
           {label}{" "}
           {labelStar && <span className="text-red-500">{labelStar}</span>}

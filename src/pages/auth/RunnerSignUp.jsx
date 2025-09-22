@@ -24,8 +24,8 @@ const RunnerSignUp = () => {
       title={`Create Your Runner Account`}
       text={`Join the UAE’s most vibrant running community.`}
     >
-      <form onSubmit={handleSubmit(onSubmit)}  className=" flex flex-col gap-10">
-        <div className=" flex flex-col gap-6">
+      <form onSubmit={handleSubmit(onSubmit)}  className=" flex flex-col xlg:gap-10 gap-4">
+        <div className=" flex flex-col lg:gap-6 gap-3.5">
           <CommonInputWrapper
             type="text"
             icon={<Avataricon />}

@@ -12,7 +12,7 @@ const HeadingSection = ({ title, text, path }) => {
 
         <Link
           to={path}
-          className=" px-5 py-[10px] duration-200 hover:bg-secondaryColor hover:text-white flex justify-center items-center rounded-full border-[1px] border-secondaryColor text-secondaryColor "
+          className=" lg:px-5 px-2 lg:py-[10px] py-[6px] duration-200 whitespace-nowrap hover:bg-secondaryColor hover:text-white flex justify-center items-center rounded-full border-[1px] border-secondaryColor text-secondaryColor "
         >
           See All
         </Link>

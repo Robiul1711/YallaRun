@@ -11,6 +11,7 @@ import OTPPage from "@/pages/auth/OTPPage";
 import PasswordReset from "@/pages/auth/PasswordReset";
 import RunnerSignUp from "@/pages/auth/RunnerSignUp";
 import SignIn from "@/pages/auth/SignIn";
+import CoachDetails from "@/pages/coachDetails/CoachDetails";
 import CoachPage from "@/pages/coaches/CoachPage";
 import ContactPage from "@/pages/contact/ContactPage";
 
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/coaches",
         element: <CoachPage/>,
+      },
+      {
+        path: "/coach/:id",
+        element: <CoachDetails/>,
       },
       {
         path: "/pricing",

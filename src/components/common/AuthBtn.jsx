@@ -8,7 +8,7 @@ const AuthBtn = ({ name, className = "", isLoading }) => {
       disabled={isLoading}
       className={`
         ${className}
-        w-full px-4 py-4 rounded-[48px] bg-primaryColor flex justify-center items-center
+        w-full xlg:px-4 px-2.5 xlg:py-4 py-2.5 xlg:rounded-[48px] rounded-xl bg-primaryColor flex justify-center items-center
         transition-all duration-300 ease-out
         hover:bg-primaryColor/90 hover:shadow-md
         active:scale-[0.98]
