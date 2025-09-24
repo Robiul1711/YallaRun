@@ -57,8 +57,8 @@ const SideBar = ({ sidebar, open, setOpen }) => {
       >
         {/* Logo */}
         <Link to={"/"} className="lg:px-8 px-4">
-          <div className="flex justify-center items-center">
-            <img src={logo} alt="Safe" className="h-24 object-contain" />
+          <div className="flex ">
+            <img src={logo} alt="Safe" className="h-12 md:h-16 object-contain" />
           </div>
         </Link>
 
