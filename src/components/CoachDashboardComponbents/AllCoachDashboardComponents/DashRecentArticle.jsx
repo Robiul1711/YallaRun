@@ -37,28 +37,28 @@ const DashRecentArticle = () => {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
+    <div className="bg-white rounded-lg shadow-sm p-4 xl:p-6">
       {/* Header */}
       <div className="flex justify-between items-start mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-1">
+          <h1 className="text-lg sm:text-2xl font-bold text-gray-900 mb-1">
             Recent Articles
           </h1>
           <p className="text-gray-500 text-sm">
             Your latest article submissions
           </p>
         </div>
-        <button className="px-4 py-2 border border-secondaryColor rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
+        <button className="px-4 py-1 xl:py-2 border text-sm sm:text-base border-secondaryColor rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
           View All
         </button>
       </div>
 
       {/* Articles List */}
-      <div className="space-y-4">
+      <div className="md:space-y-4 space-y-2">
         {articles.map((article) => (
           <div
             key={article.id}
-            className="flex items-center justify-between p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors"
+            className="flex items-center justify-between sm:p-4 sm:border sm:border-gray-100 rounded-lg hover:bg-gray-50 transition-colors"
           >
             {/* Left side - Image, Title, Date */}
             <div className="flex items-center space-x-4">
@@ -67,17 +67,17 @@ const DashRecentArticle = () => {
               </div>
 
               <div>
-                <h3 className="font-medium text-gray-900 mb-1">
+                <h3 className="font-medium text-sm sm:text-base text-gray-900 mb-1">
                   {article.title}
                 </h3>
-                <p className="text-sm text-gray-500">{article.date}</p>
+                <p className="text-xs sm:text-sm text-gray-500">{article.date}</p>
               </div>
             </div>
 
             {/* Right side - Status Badge */}
             <div className="flex-shrink-0">
               <span
-                className={`px-3 py-1 rounded-full text-white text-sm font-medium ${
+                className={`px-3 py-1 rounded-full text-white text-xs sm:text-sm font-medium ${
                   article.status === "Published"
                     ? "bg-green-500"
                     : article.status === "Pending"

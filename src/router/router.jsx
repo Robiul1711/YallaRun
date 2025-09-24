@@ -5,9 +5,14 @@ import HelpSupport from "@/components/CoachDashboardComponbents/HelpAndSupportCo
 import MyArticle from "@/components/CoachDashboardComponbents/MyArticle";
 import Setting from "@/components/CoachDashboardComponbents/SettingComponents/Setting";
 import Subscription from "@/components/CoachDashboardComponbents/Subscription";
+import RunnerDashboard from "@/components/RunnerDasgboardComponents/AllDashRunnerCom.jsx/RunnerDashboard";
+import RunnerCoaches from "@/components/RunnerDasgboardComponents/RunnerCoaches";
+import RunnerDasMyEvents from "@/components/RunnerDasgboardComponents/RunnerDasMyEvents";
+import RunnerSaveArticle from "@/components/RunnerDasgboardComponents/RunnerSaveArticle";
 import CoachLayout from "@/layout/CoachLayout";
 import AdminLayout from "@/layout/CoachLayout";
 import Layout from "@/layout/Layout";
+import RunnerLayout from "@/layout/RunnerLayout";
 import AboutPage from "@/pages/about/AboutPage";
 import ArticlePage from "@/pages/article/ArticlePage";
 import ArticleDetails from "@/pages/articleDetails/ArticleDetails";
@@ -111,37 +116,76 @@ const router = createBrowserRouter([
 
     ],
   },
-  // Admin routes
+  // Coach routes
   {
-    path: "/dashboard",
+    path: "/coachdashboard",
     element: <CoachLayout />,
     children: [
       {
-        path: "/dashboard",
+        path: "/coachdashboard",
         element: <Dashboard />
       },
       {
-        path: "/dashboard/create-article",
+        path: "/coachdashboard/create-article",
         element: <CreateArticle />
       },
       {
-        path: "/dashboard/my-article",
+        path: "/coachdashboard/my-article",
         element: <MyArticle />
       },
+          {
+        path: "/coachdashboard/save-article",
+        element: <RunnerSaveArticle />
+      },
       {
-        path: "/dashboard/event-participations",
+        path: "/coachdashboard/event-participations",
         element: <EventParticipations />
       },
       {
-        path: "/dashboard/subscription",
+        path: "/coachdashboard/subscription",
         element: <Subscription />
       },
       {
-        path: "/dashboard/help-support",
+        path: "/coachdashboard/help-support",
         element: <HelpSupport />
       },
       {
-        path: "/dashboard/setting",
+        path: "/coachdashboard/setting",
+        element: <Setting />
+      },
+    ],
+  },
+  // Runner routes
+  {
+    path: "/runnerdashboard",
+    element: <RunnerLayout />,
+    children: [
+      {
+        path: "/runnerdashboard",
+        element: <RunnerDashboard />
+      },
+      {
+        path: "/runnerdashboard/my-events",
+        element: <RunnerDasMyEvents />
+      },
+      {
+        path: "/runnerdashboard/runner-coaches",
+        element: <RunnerCoaches />
+      },
+      {
+        path: "/runnerdashboard/runner-save-article",
+        element: <RunnerSaveArticle />
+      },
+      {
+        path: "/runnerdashboard/subscription",
+        element: <Subscription />
+      },
+      {
+        path: "/runnerdashboard/help-support",
+        element: <HelpSupport />
+      },
+      {
+        path: "/runnerdashboard/setting",
         element: <Setting />
       },
     ],

@@ -55,7 +55,7 @@ export default function HelpSupport() {
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="tabBackground"
-                  className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg"
+                  className="absolute inset-0 bg-primaryColor rounded-lg"
                   initial={{
                     opacity: 0,
                   }}
@@ -149,7 +149,7 @@ export default function HelpSupport() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -10 }}
               transition={{ duration: 0.3 }}
-              className="p-6 h-[calc(100vh-150px)] overflow-y-auto"
+              className="p-4 md:p-6 h-[calc(100vh-150px)] overflow-y-auto"
             >
               <h3 className="text-lg font-semibold flex items-center gap-2 mb-4 text-gray-900">
                 <span>{tabs.find((t) => t.id === activeTab)?.icon}</span>

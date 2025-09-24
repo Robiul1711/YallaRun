@@ -1,3 +1,4 @@
+import { Switch } from "@/components/ui/switch";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -13,10 +14,7 @@ const EditProfile = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className=" space-y-6"
-    >
+    <form onSubmit={handleSubmit(onSubmit)} className=" space-y-6">
       {/* Title */}
       <h2 className="text-xl font-semibold text-gray-800 border-b pb-3">
         Personal Info
@@ -50,7 +48,9 @@ const EditProfile = () => {
 
         {/* Email */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">Email</label>
+          <label className="block text-sm font-medium text-gray-700">
+            Email
+          </label>
           <input
             {...register("email", { required: true })}
             placeholder="Enter your email"
@@ -166,13 +166,35 @@ const EditProfile = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">TikTok</label>
+          <label className="block text-sm font-medium text-gray-700">
+            TikTok
+          </label>
           <input
             {...register("tiktok")}
             placeholder="https://www.tiktok.com/@username"
             className="mt-1 w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400"
           />
         </div>
+      </div>
+      {/* Deactived */}
+      <div className="flex justify-between">
+        <div className="">
+          <h1 className="sm:text-lg md:text-xl font-bold">
+            Profile Visibility
+          </h1>
+          <p>
+            Control whether your profile is visible to runners and visitors.
+          </p>
+        </div>
+
+        <Switch
+          // checked={notifications.events}
+          // onCheckedChange={() => handleToggle('events')}
+          className="data-[state=checked]:bg-secondaryColor"
+        />
+      </div>
+      <div className="p-4 border rounded-lg border-yellow-400 space-y-3">
+<p>When set to Inactive, your profile will not appear on the Coaches page. You can still access your dashboard, write and submit articles, and manage your account.</p>
       </div>
 
       {/* Save Button */}

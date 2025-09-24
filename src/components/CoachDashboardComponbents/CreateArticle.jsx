@@ -85,14 +85,14 @@ const onSubmit = (data) => {
   return (
     <>
     <div>
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Share Your Expertise </h1>
-      <p className="text-gray-600 mb-4">
+      <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Share Your Expertise </h1>
+      <p className="text-sm sm:text-base text-gray-600 mb-4">
        Submit your article draft. It will be reviewed by YallaRun's editorial team before publishing.
       </p>
     </div>
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className=" bg-white shadow-md rounded-xl p-8 space-y-6"
+      className=" bg-white shadow-md rounded-xl p-6 md:p-8 space-y-6"
     >
       {/* Article Title */}
       <div>

@@ -15,8 +15,8 @@ const CommonNavbar = ({ open, setOpen }) => {
           <GiHamburgerMenu color="black" size={26} />
         </span>
         <div className=" text-black">
-          <h1 className="text-3xl font-bold">Welcome Back, Jorge Franco!</h1>
-          <p className="mt-2 text-[#666666]">
+          <h1 className="md:text-3xl font-bold">Welcome Back, Jorge Franco!</h1>
+          <p className="text-xs sm:text-sm  mt-2 text-[#666666]">
             Elevate your financial future with smart property investments.
           </p>
         </div>
