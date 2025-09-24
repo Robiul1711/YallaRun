@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import article from "@/assets/images/article1.png";
-import { TfiLocationPin } from "react-icons/tfi";
+import { HiOutlineLocationMarker } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import {
   InstagramIcon,
@@ -129,7 +129,7 @@ const RunnerCoaches = () => {
                   {article.degination}
                 </p>
                 <p className="text-xs sm:text-sm text-gray-500 flex items-center gap-1">
-                  <TfiLocationPin className="text-gray-400" /> {article.location}
+                  <HiOutlineLocationMarker className="text-gray-400" /> {article.location}
                 </p>
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <p className="text-xs sm:text-sm text-gray-500">
@@ -145,18 +145,18 @@ const RunnerCoaches = () => {
             </div>
 
             {/* Right side */}
-            <div className="flex flex-col sm:items-end gap-2 text-xs sm:text-sm md:text-base">
+            <div className="flex sm:flex-col sm:items-start gap-4 text-xs sm:text-sm md:text-base">
               <Link
                 to={article.instagram}
                 className="text-blue-500 flex items-center gap-2 hover:underline"
               >
-                <InstagramIcon /> Instagram
+                <InstagramIcon className={"size-4 sm:size-5"} /> Instagram
               </Link>
               <Link
                 to={article.tiktok}
                 className="text-blue-500 flex items-center gap-2 hover:underline"
               >
-                <TiktokIcon /> TikTok
+                <TiktokIcon className={"size-4 sm:size-5"} /> TikTok
               </Link>
             </div>
           </div>

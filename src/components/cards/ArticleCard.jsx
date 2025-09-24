@@ -19,7 +19,7 @@ const ArticleCard = ({ item }) => {
       {/* Overlay Box */}
       <div
         className="
-          absolute bottom-10 left-1/2 -translate-x-1/2
+          absolute bottom-6 left-1/2 -translate-x-1/2
           bg-[rgba(17,17,17,0.40)] backdrop-blur-xl
           rounded-[24px] xlg:p-5 p-2.5 flex flex-col xlg:gap-5 gap-2.5
           w-[90%] max-w-[900px]
