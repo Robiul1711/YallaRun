@@ -46,21 +46,21 @@ const RunnerPastEvent = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-4 xl:p-6">
-       {/* Header */}
-       <div className="flex justify-between items-start mb-6">
-         <div>
-           <h1 className="text-lg sm:text-2xl font-bold text-gray-900 mb-1">
-            Past Events
-           </h1>
-           <p className="text-gray-500 text-sm">
-           Look back at previous YallaRun events, results, and community highlights.
-           </p>
-         </div>
-         <button className="px-4 py-1 xl:py-2 border text-sm sm:text-base border-secondaryColor rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
-           {" "}
-           View All
-         </button>
-       </div>
+{/* Header */}
+<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
+  <div>
+    <h1 className="text-lg sm:text-2xl font-bold text-gray-900 mb-1">
+      Past Events
+    </h1>
+    <p className="text-gray-500 text-sm sm:text-base">
+      Look back at previous YallaRun events, results, and community highlights.
+    </p>
+  </div>
+  <button className="w-fit px-4 py-1 xl:py-2 border text-sm sm:text-base border-secondaryColor rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
+    View All
+  </button>
+</div>
+
  
        {/* Articles List */}
        <div className="md:space-y-4 space-y-2">
