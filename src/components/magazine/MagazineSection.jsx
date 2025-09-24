@@ -8,10 +8,10 @@ const MagazineSection = () => {
   const [search, setSearch] = useState();
   const [page, setPage] = useState(1);
   return (
-    <div className=" flex flex-col gap-12 section-padding-x section-padding-y">
+    <div className=" flex flex-col lg:gap-12 gap-6 section-padding-x section-padding-y">
       <MagazineSearchArea setSearch={setSearch} />
 
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid xlg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
         {magazineData?.map((item, index) => (
           <MagazineCard item={item} key={index} />
         ))}

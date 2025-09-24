@@ -13,7 +13,7 @@ const LeaveComments = () => {
     console.log(data);      
   }
   return (
-    <div className=" w-full max-w-[1258px] mx-auto px-4 section-padding-y flex flex-col gap-8">
+    <div className=" w-full max-w-[1258px] mx-auto px-4 section-padding-y flex flex-col lg:gap-8 gap-3">
       <Title32 className={` !text-[#141414] !font-semibold`}>
         Leave a Comment
       </Title32>

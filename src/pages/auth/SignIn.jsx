@@ -3,7 +3,7 @@ import React from "react";
 import A1 from "@/assets/images/a1.png";
 import { useForm } from "react-hook-form";
 import CommonInputWrapper from "@/components/common/CommonInputWrapper";
-import { EmailIcon } from "@/components/icons/CustomIcon";
+import { EmailIcon, PasswordIcon } from "@/components/icons/CustomIcon";
 import { Title18 } from "@/components/common/Title";
 import { Link } from "react-router-dom";
 import AuthBtn from "@/components/common/AuthBtn";
@@ -38,7 +38,7 @@ const SignIn = () => {
             }}
           />
           <CommonInputWrapper
-            icon={<EmailIcon />}
+            icon={<PasswordIcon />}
             type="password"
             label="Password"
             register_as="password"

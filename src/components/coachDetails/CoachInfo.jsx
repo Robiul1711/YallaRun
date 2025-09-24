@@ -5,8 +5,8 @@ import ConnectCoachModal from "./ConnectCoachModal";
 const CoachInfo = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
-    <div className="section-padding-x  pt-[200px]  ">
-      <div className=" mx-auto  rounded-lg  p-8">
+    <div className="section-padding-x  lg:pt-[200px] pt-[150px]  ">
+      <div className=" mx-auto  rounded-lg  lg:p-8">
         {/* Breadcrumb */}
         <div className="flex items-center text-sm text-gray-600 mb-8">
           <span>Coaches</span>
@@ -15,7 +15,7 @@ const CoachInfo = () => {
         </div>
 
         {/* Coach Profile Section */}
-        <div className="flex items-start gap-6 mb-8">
+        <div className="flex sm:flex-row flex-col items-start gap-6 sm:mb-8 mb-4">
           {/* Profile Image */}
           <div className="relative">
             <img
@@ -27,7 +27,7 @@ const CoachInfo = () => {
 
           {/* Profile Info */}
           <div className="flex-1">
-            <div className="flex items-start gap-10 mb-2">
+            <div className="flex items-start lg:gap-10 gap-4 sm:flex-row flex-col mb-2">
               <div>
                 <h1 className="text-2xl font-semibold text-gray-900 mb-1">
                   Ahmed Al Mansoori

@@ -4,7 +4,7 @@ import { Title24, Title48 } from "./Title";
 const CommonBanner = ({ children, bannerImage ,title,text}) => {
   return (
     <div
-      className="relative w-full section-padding-x h-[800px] bg-cover bg-center bg-no-repeat"
+      className="relative w-full section-padding-x xl:h-[800px] lg:h-[600px] h-[500px] bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bannerImage})` }} // if using Next.js image imports
     >
       {/* Overlay */}
@@ -15,11 +15,11 @@ const CommonBanner = ({ children, bannerImage ,title,text}) => {
         }}
       />
 
-     <div className=" flex flex-col gap-4 pt-[300px] relative max-w-[768px]">
+     <div className=" flex flex-col gap-4 xl:pt-[300px] pt-[200px] relative max-w-[768px]">
              <Title24 className={ `!font-medium text-white`}>
                  {title}
              </Title24>
-             <Title48 className={`!text-white !font-[800] leading-[72px]`}>
+             <Title48 className={`!text-white !font-[800] xlg:leading-[72px]`}>
                  {text}
              </Title48>
      

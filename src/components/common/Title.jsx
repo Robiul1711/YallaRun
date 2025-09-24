@@ -10,7 +10,7 @@ export const Title32 = ({ className, children }) => {
 export const Title48 = ({ className, children }) => {
   return (
     <p
-      className={` ${className} xlg:text-[48px] md:text-[36px] text-[24px] text-customBlack leading-[48px]  font-semibold `}
+      className={` ${className} xlg:text-[48px] md:text-[36px] text-[24px] text-customBlack md:leading-[48px] leading-[36px] font-semibold `}
     >
       {children}
     </p>

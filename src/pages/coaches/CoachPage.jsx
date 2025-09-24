@@ -14,7 +14,7 @@ const CoachPage = () => {
         text={`Certified trainers ready to guide your running journey.`}
       ></CommonBanner>
 
-      <div className=" section-padding-x section-padding-y flex flex-col gap-12">
+      <div className=" section-padding-x section-padding-y flex flex-col lg:gap-12 md:gap-6 gap-4">
         <CoachFilter setCoachFilter={setCoachFilter} />
         <CoachSection/>
       </div>

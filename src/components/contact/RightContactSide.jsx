@@ -17,7 +17,7 @@ const RightContactSide = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className=" w-[70%] px-12 py-16 rounded-xl bg-[#E6EEEE] flex flex-col gap-5"
+      className=" xmd:w-[70%] w-full lg:px-12 px-6 lg:py-16 py-8 rounded-xl bg-[#E6EEEE] flex flex-col gap-5"
     >
       <CommonInputWrapper
         label="Name"

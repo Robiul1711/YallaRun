@@ -37,7 +37,7 @@ const ArticleDetailsSection = () => {
           </span>
           <p>Training & Tips</p>
         </div>
-        <div className="flex items-center gap-10  mb-6">
+        <div className="flex sm:flex-row flex-col sm:items-center xlg:gap-10 gap-4  sm:mb-6">
           <div className="flex items-center gap-3">
             <img
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&q=80"

@@ -11,12 +11,12 @@ const EventSection = () => {
   const [filterEvent, setFilterEvent] = useState();
   const [page, setPage] = useState(1);
   return (
-    <div className=" flex flex-col gap-12 section-padding-x section-padding-y">
+    <div className=" flex flex-col xlg:gap-12 gap-5 section-padding-x section-padding-y">
       <EventFilter setFilterEvent={setFilterEvent} />
 
-      <div className=" flex flex-col gap-16">
+      <div className=" flex flex-col xlg:gap-16 md:gap-8 gap-4">
         <Title32 className={`max-w-[850px] !text-customBlack`}>Explore expert tips, community stories, and inspiration to fuel your next run.</Title32>
-        <div className=" grid grid-cols-2 gap-6">
+        <div className=" grid md:grid-cols-2 lg:gap-6 gap-3">
           {upcommingMerathon?.map((item, index) => (
             <ListCard item={item} key={index} />
           ))}
