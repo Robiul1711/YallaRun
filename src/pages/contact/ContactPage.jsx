@@ -13,7 +13,7 @@ const ContactPage = () => {
         text={`We’d love to hear from you whether you’re a runner, coach, or brand partner.`}
       ></CommonBanner>
 
-      <div className=" w-full flex gap-10 section-padding-x section-padding-y">
+      <div className=" w-full xmd:flex-row flex-col flex lg:gap-10 gap-4 section-padding-x section-padding-y">
         <LeftContactSide />
         <RightContactSide />
       </div>

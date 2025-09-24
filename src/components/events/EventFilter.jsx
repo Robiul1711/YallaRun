@@ -12,7 +12,7 @@ const EventFilter = ({ setFilterEvent }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className=" grid grid-cols-5 gap-6 place-items-center"
+      className=" flex xmd:flex-nowrap flex-wrap  md:gap-6 gap-3 items-center"
     >
       <CommonInputWrapper
         label="Event Name"
@@ -48,7 +48,7 @@ const EventFilter = ({ setFilterEvent }) => {
         placeholder="Event Type"
       />
 
-      <ArrowButton className=" mt-7" name="Find Event" type="submit" />
+      <ArrowButton className=" mt-7 rounded-xl whitespace-nowrap" name="Find Event" type="submit" />
     </form>
   );
 };

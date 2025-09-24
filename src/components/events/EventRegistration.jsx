@@ -20,14 +20,14 @@ const EventRegistration = () => {
     console.log(data);
   };
   return (
-    <div className=" flex flex-col gap-12">
-      <div className=" flex flex-col gap-6">
+    <div className=" flex flex-col xlg:gap-12 gap-4">
+      <div className=" flex flex-col lg:gap-6 gap-3">
         <Title32 className={`!text-customBlack !font-semibold`}>
           Event Registration
         </Title32>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col lg:gap-5 gap-3.5">
         <CommonInputWrapper
           type="radio"
           label="Role"
@@ -42,7 +42,7 @@ const EventRegistration = () => {
           ]}
         />
 
-        <div className=" grid grid-cols-2 gap-6">
+        <div className=" grid sm:grid-cols-2 lg:gap-6 gap-3">
           <CommonInputWrapper
             label="Name"
             type="text"
@@ -62,7 +62,7 @@ const EventRegistration = () => {
             placeholder="Enter your email"
           />
         </div>
-        <div className=" grid grid-cols-2 gap-6">
+        <div className=" grid sm:grid-cols-2 lg:gap-6 gap-3">
           <CommonInputWrapper
             label="Phone"
             type="number"
@@ -88,12 +88,12 @@ const EventRegistration = () => {
           />
         </div>
 
-        <div className=" flex flex-col gap-6">
+        <div className=" flex flex-col lg:gap-6 gap-3">
           <Title18 className={`!text-customBlack font-semibold`}>
             Emergency Contact
           </Title18>
 
-          <div className=" grid grid-cols-2 gap-6">
+          <div className=" grid sm:grid-cols-2 lg:gap-6 gap-3">
             <CommonInputWrapper
               label="Contact Name"
               type="text"
@@ -115,12 +115,12 @@ const EventRegistration = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col gap-6">
+        <div className=" flex flex-col lg:gap-6">
           <Title18 className={`!text-customBlack font-semibold`}>
             Event Preferences
           </Title18>
 
-          <div className=" grid grid-cols-2 gap-6">
+          <div className=" grid sm:grid-cols-2 lg:gap-6 gap-3">
             <CommonInputWrapper
               type="select"
               register={register}
@@ -154,12 +154,12 @@ const EventRegistration = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col gap-6">
+        <div className=" flex flex-col lg:gap-6">
           <Title18 className={`!text-customBlack font-semibold`}>
             Coach’s Specialization
           </Title18>
 
-          <div className=" grid grid-cols-2 gap-6">
+          <div className=" grid sm:grid-cols-2 lg:gap-6 gap-3">
             <CommonInputWrapper
               type="select"
               register={register}

@@ -27,9 +27,9 @@ const MissionVision = () => {
   ];
 
   return (
-    <div className="section-padding-x section-padding-y w-full flex flex-col md:flex-row gap-10">
+    <div className="section-padding-x section-padding-y w-full flex flex-col md:flex-row xlg:gap-10 gap-4">
       {/* Left Image */}
-      <div className="md:w-1/2 w-full rounded-[32px] overflow-hidden h-[680px]">
+      <div className="md:w-1/2 w-full rounded-[32px] overflow-hidden md:h-[680px] h-[400px]">
         <img
           src={ImageVision}
           alt="Vision"
@@ -38,7 +38,7 @@ const MissionVision = () => {
       </div>
 
       {/* Right Panels */}
-      <div className="md:w-1/2 w-full flex flex-col gap-6">
+      <div className="md:w-1/2 w-full flex flex-col lg:gap-6 gap-3">
         {panels.map((panel) => {
           const isActive = active === panel.key;
           return (
@@ -47,9 +47,13 @@ const MissionVision = () => {
               onMouseEnter={() => setActive(panel.key)}
               onClick={() => setActive(panel.key)}
               className={`
-                rounded-xl p-6 cursor-pointer flex flex-col gap-4
+                rounded-xl md:p-6 p-4 cursor-pointer flex flex-col gap-4
                 transition-all duration-500 ease-in-out
-                ${isActive ? "flex-grow bg-primaryColor" : "flex-none bg-[#E6EEEE]"}
+                ${
+                  isActive
+                    ? "flex-grow bg-primaryColor"
+                    : "flex-none bg-[#E6EEEE]"
+                }
               `}
             >
               {/* Icon + Title */}
@@ -61,7 +65,9 @@ const MissionVision = () => {
                 >
                   <RiFocus2Line
                     size={24}
-                    className={`${isActive ? "text-primaryColor" : "text-white"}`}
+                    className={`${
+                      isActive ? "text-primaryColor" : "text-white"
+                    }`}
                   />
                 </span>
 
@@ -89,7 +95,7 @@ const MissionVision = () => {
                 }`}
               >
                 <Title32
-                  className={`mt-4 transition-colors duration-300 ${
+                  className={` transition-colors duration-300 ${
                     isActive ? "!text-white" : "!text-gray-700"
                   }`}
                 >

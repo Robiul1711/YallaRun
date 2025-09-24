@@ -14,9 +14,9 @@ const CoachFilter = ({ setCoachFilter }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className=" w-full flex items-center j gap-2"
+      className=" w-full flex xmd:items-center xmd:flex-row flex-col  gap-2"
     >
-      <div className=" w-[80%] grid grid-cols-3 gap-6">
+      <div className=" xmd:w-[80%] grid md:grid-cols-3 gap-6">
         <CommonInputWrapper
           label="Coach Name"
           register={register}
@@ -43,8 +43,8 @@ const CoachFilter = ({ setCoachFilter }) => {
         />
       </div>
 
-      <div className=" w-[20%] mt-8">
-        <ArrowButton name={`Find Coach`} type="submit" />
+      <div className=" xmd:w-[20%] mt-8">
+        <ArrowButton className="rounded-xl" name={`Find Coach`} type="submit" />
       </div>
     </form>
   );

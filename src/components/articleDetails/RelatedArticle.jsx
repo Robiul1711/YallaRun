@@ -10,7 +10,7 @@ const RelatedArticle = () => {
             You might also like
         </Title32>
 
-        <div className=" grid grid-cols-3 gap-6">
+        <div className=" grid lg:grid-cols-3 sm:grid-cols-2 xlg:gap-6 gap-2.5">
         {latestArticles?.map((item, index) => (
           <ArticleCard item={item} key={index} />
         ))}

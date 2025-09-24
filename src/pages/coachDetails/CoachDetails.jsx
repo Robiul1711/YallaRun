@@ -4,7 +4,7 @@ import React from "react";
 
 const CoachDetails = () => {
   return (
-    <div>
+    <div className=" mb-6">
       <CoachInfo />
       <CoachArticles />
     </div>
