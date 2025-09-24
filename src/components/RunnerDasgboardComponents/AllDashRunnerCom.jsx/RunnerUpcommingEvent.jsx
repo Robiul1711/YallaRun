@@ -47,20 +47,21 @@ const RunnerUpcommingEvent = () => {
   return (
     <div className="bg-white rounded-lg shadow-sm p-4 xl:p-6">
        {/* Header */}
-       <div className="flex justify-between items-start mb-6">
-         <div>
-           <h1 className="text-lg sm:text-2xl font-bold text-gray-900 mb-1">
-             Upcoming Events
-           </h1>
-           <p className="text-gray-500 text-sm">
-            Discover and register for exciting races, marathons, and community runs happening soon.
-           </p>
-         </div>
-         <button className="px-4 py-1 xl:py-2 border text-sm sm:text-base border-secondaryColor rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
-           {" "}
-           View All
-         </button>
-       </div>
+<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
+  <div>
+    <h1 className="text-lg sm:text-2xl font-bold text-gray-900 mb-1">
+      Upcoming Events
+    </h1>
+    <p className="text-gray-500 text-sm sm:text-base">
+      Discover and register for exciting races, marathons.
+    </p>
+  </div>
+  <button className="w-full sm:w-auto px-4 py-2 border text-sm sm:text-base border-secondaryColor rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
+    View All
+  </button>
+</div>
+
+
  
        {/* Articles List */}
        <div className="md:space-y-4 space-y-2">
