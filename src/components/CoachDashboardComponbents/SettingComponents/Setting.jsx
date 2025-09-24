@@ -78,9 +78,9 @@ export default function Setting() {
               )}
 
               {}
-              <div className="flex items-center gap-3 z-10">
-                <span className="text-xl">{tab.icon}</span>
-                <span className="font-medium">{tab.name}</span>
+              <div className="flex items-center gap-2 sm:gap-3 z-10">
+                <span className="text-base sm:text-xl">{tab.icon}</span>
+                <span className="text-sm sm:text-base font-medium">{tab.name}</span>
               </div>
 
               {}
@@ -158,7 +158,7 @@ export default function Setting() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -10 }}
               transition={{ duration: 0.3 }}
-              className="p-6 h-[calc(100vh-150px)] overflow-y-auto"
+              className="p-4 md:p-6 h-[calc(100vh-150px)] overflow-y-auto"
             >
               <h3 className="text-lg font-semibold flex items-center gap-2 mb-4 text-gray-900">
                 <span>{tabs.find((t) => t.id === activeTab)?.icon}</span>

@@ -82,8 +82,8 @@ const MyArticle = () => {
   return (
     <div className="">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">My Articles</h1>
+      <div className="mb-6 sm:mb-8">
+        <h1 className=" text-2xl sm:text-3xl font-bold text-gray-900 mb-2">My Articles</h1>
         <p className="text-gray-600">Manage your drafts and published work.</p>
       </div>
 
@@ -95,13 +95,13 @@ const MyArticle = () => {
             placeholder="Search by article title or categories..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-2 sm:px-4 py-2 md:py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
         <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[200px] justify-between"
+            className="flex items-center gap-2 px-2 sm:px-4 py-2 md:py-3 bg-white border border-gray-300 rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[200px] justify-between"
           >
             <span>{selectedCategory}</span>
             <FiChevronDown className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -144,27 +144,27 @@ const MyArticle = () => {
             <tbody className="divide-y divide-gray-200">
               {filteredArticles.map((article) => (
                 <tr key={article.id} className="hover:bg-gray-50">
-                  <td className="px-6 py-4">
+                  <td className="px-4 md:px-6 py-2 md:py-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-pink-500 rounded-lg flex items-center justify-center">
              <img src={article.image} alt="" />
                     </div>
                   </td>
-                  <td className="px-6 py-4">
-                    <div className="font-medium text-gray-900">{article.title}</div>
+                  <td className="px-4 md:px-6 py-2 md:py-4">
+                    <div className="font-medium text-xs sm:text-sm md:text-base text-gray-900">{article.title}</div>
                   </td>
-                  <td className="px-6 py-4">
-                    <span className="text-gray-600">{article.date}</span>
+                  <td className="px-4 md:px-6 py-2 md:py-4">
+                    <span className="text-gray-600 text-xs sm:text-sm md:text-base">{article.date}</span>
                   </td>
-                  <td className="px-6 py-4">
-                    <span className="text-gray-600">{article.likes}</span>
+                  <td className="px-4 md:px-6 py-2 md:py-4">
+                    <span className="text-gray-600 text-xs sm:text-sm md:text-base">{article.likes}</span>
                   </td>
-                  <td className="px-6 py-4">
-                    <span className="text-gray-600">{article.comments}</span>
+                  <td className="px-4 md:px-6 py-2 md:py-4">
+                    <span className="text-gray-600 text-xs sm:text-sm md:text-base">{article.comments}</span>
                   </td>
-                  <td className="px-6 py-4">
-                    <span className="text-gray-600">{article.category}</span>
+                  <td className="px-4 md:px-6 py-2 md:py-4">
+                    <span className="text-gray-600 text-xs sm:text-sm md:text-base">{article.category}</span>
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-4 md:px-6 py-2 md:py-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(article.status)}`}>
                       {article.status}
                     </span>
@@ -172,7 +172,7 @@ const MyArticle = () => {
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-2">
                       {article.status === 'Published' && (
-                        <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+                        <button className="p-2 text-gray-400  hover:text-gray-600 transition-colors">
                           <FiEye size={16} />
                         </button>
                       )}

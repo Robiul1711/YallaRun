@@ -1,42 +1,35 @@
 import React from 'react';
-import { HiOutlineDocumentText, HiOutlineClock, HiOutlineCalendar, HiOutlineCalendarDays } from 'react-icons/hi2';
-import { IoPeople } from "react-icons/io5";
-const StatsDashboard = () => {
+import { HiOutlineCalendar, HiOutlineCalendarDays } from 'react-icons/hi2';
+import { FiFileText } from "react-icons/fi";
+import { FaUsers } from "react-icons/fa6";
+const RunnerStare = () => {
   const stats = [
     {
       id: 1,
-      title: 'Published Article',
+      title: 'Saved Articles',
       value: '12',
-      icon: HiOutlineDocumentText,
-      iconBg: 'bg-green-100',
-      iconColor: 'text-green-600'
+      icon: FiFileText,
+      iconBg: 'bg-[#9FCC3B1A]',
+    iconColor: 'text-[#9FCC3B]'
     },
     {
       id: 2,
-      title: 'Pending Article',
+      title: 'Connected Coaches',
       value: '02',
-      icon: HiOutlineClock,
-      iconBg: 'bg-orange-100',
-      iconColor: 'text-orange-600'
+      icon: FaUsers,
+     iconBg: 'bg-[#9FCC3B1A]',
+      iconColor: 'text-[#9FCC3B]'
     },
     {
       id: 3,
-        title: 'Runners Connected',
-      value: '220',
-      icon: IoPeople,
-      iconBg: 'bg-[#005258]/10',
-      iconColor: 'text-[#005258]'
+      title: 'Upcoming Events',
+      value: '02',
+      icon: HiOutlineCalendar,
+      iconBg: 'bg-[#9FCC3B1A]',
+     iconColor: 'text-[#9FCC3B]'
     },
     {
       id: 4,
-    title: 'Upcoming Events',
-      value: '02',
-      icon: HiOutlineCalendar,
-      iconBg: 'bg-green-100',
-      iconColor: 'text-green-600'
-    },
-    {
-      id: 5,
       title: 'Past Events',
       value: '10',
       icon: HiOutlineCalendarDays,
@@ -47,7 +40,7 @@ const StatsDashboard = () => {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-2 sm:gap-4 xl:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 xl:gap-6">
         {stats.map((stat) => {
           const IconComponent = stat.icon;
           return (
@@ -56,7 +49,7 @@ const StatsDashboard = () => {
               className="bg-white rounded-lg  hover:shadow-lg p-4 sm:p-6  transition-shadow duration-200"
             >
               <div className="flex items-center gap-4 justify-between">
-                <div className={`${stat.iconBg} ${stat.iconColor} p-1 sm:p-2 md:p-3 rounded-lg md:rounded-xl`}>
+                <div className={`${stat.iconBg} ${stat.iconColor} p-1 sm:p-2 md:p-3 rounded-lg`}>
                   <IconComponent className="w-6 h-6" />
                 </div>
                 <div className="flex-1">
@@ -76,4 +69,4 @@ const StatsDashboard = () => {
   );
 };
 
-export default StatsDashboard;
+export default RunnerStare;

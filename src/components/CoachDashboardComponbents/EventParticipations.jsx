@@ -75,8 +75,8 @@ const filteredEvents = events.filter(
   return (
     <div className="">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+      <div className="mb-6 md:mb-8">
+        <h1 className="text-2xl  sm:text-3xl font-bold text-gray-900 mb-2">
           Events Participation
         </h1>
         <p className="text-gray-600">See your upcoming and past event roles.</p>
@@ -90,13 +90,13 @@ const filteredEvents = events.filter(
             placeholder="Search event by name or location....."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-2 md:px-4 py-2 md:py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
         <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[200px] justify-between"
+            className="flex items-center gap-2 px-2 md:px-4 py-2 md:py-3 bg-white border border-gray-300 rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 min-w-[200px] justify-between"
           >
             <span>{selectedCategory}</span>
             <FiChevronDown
@@ -130,28 +130,28 @@ const filteredEvents = events.filter(
           <table className="w-full">
             <thead className="bg-gray-50 border-b border-gray-200">
               <tr>
-                <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <th className="px-4 py-2 md:px-6 md:py-4 text-left text-sm font-medium text-gray-700">
                   Image
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <th className="px-4 py-2 md:px-6 md:py-4 text-left text-sm font-medium text-gray-700">
                   Event Name
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <th className="px-4 py-2 md:px-6 md:py-4 text-left text-sm font-medium text-gray-700">
                   Event Type
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <th className="px-4 py-2 md:px-6 md:py-4 text-left text-sm font-medium text-gray-700">
                   Location
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <th className="px-4 py-2 md:px-6 md:py-4 text-left text-sm font-medium text-gray-700">
                   Date
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <th className="px-4 py-2 md:px-6 md:py-4 text-left text-sm font-medium text-gray-700">
                   Role
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <th className="px-4 py-2 md:px-6 md:py-4 text-left text-sm font-medium text-gray-700">
                   Status
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-medium text-gray-700">
+                <th className="px-4 py-2 md:px-6 md:py-4 text-left text-sm font-medium text-gray-700">
                   Action
                 </th>
               </tr>
@@ -159,7 +159,7 @@ const filteredEvents = events.filter(
             <tbody className="divide-y divide-gray-200">
               {filteredEvents.map((event) => (
                 <tr key={event.id} className="hover:bg-gray-50">
-                  <td className="px-6 py-4">
+                  <td className="px-4 py-2 md:px-6 md:py-4">
                     <div className="w-12 h-12 rounded-lg overflow-hidden">
                       <img
                         src={event.image}
@@ -168,14 +168,14 @@ const filteredEvents = events.filter(
                       />
                     </div>
                   </td>
-                  <td className="px-6 py-4 font-medium text-gray-900">
+                  <td className="px-4 py-2 md:px-6 md:py-4 font-medium text-xs sm:text-sm md:text-base text-gray-900">
                     {event.eventName}
                   </td>
-                  <td className="px-6 py-4 text-gray-600">{event.eventType}</td>
-                  <td className="px-6 py-4 text-gray-600">{event.location}</td>
-                  <td className="px-6 py-4 text-gray-600">{event.date}</td>
-                  <td className="px-6 py-4 text-gray-600">{event.role}</td>
-                  <td className="px-6 py-4">
+                  <td className="px-4 py-2 md:px-6 md:py-4 text-gray-600 text-xs sm:text-sm md:text-base">{event.eventType}</td>
+                  <td className="px-4 py-2 md:px-6 md:py-4 text-gray-600 text-xs sm:text-sm md:text-base">{event.location}</td>
+                  <td className="px-4 py-2 md:px-6 md:py-4 text-gray-600 text-xs sm:text-sm md:text-base">{event.date}</td>
+                  <td className="px-4 py-2 md:px-6 md:py-4 text-gray-600 text-xs sm:text-sm md:text-base">{event.role}</td>
+                  <td className="px-4 py-2 md:px-6 md:py-4">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(
                         event.status
@@ -184,7 +184,7 @@ const filteredEvents = events.filter(
                       {event.status}
                     </span>
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-4 py-2 md:px-6 md:py-4">
                     <div className="flex items-center gap-2">
                       {event.status === "Published" && (
                         <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">

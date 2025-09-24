@@ -1,7 +1,7 @@
 import React from "react";
 import dasboardCoach from "@/assets/images/dasboardCoach.png";
 
-const DashBanner = () => {
+const RunnerDashBanner = () => {
   return (
     <div
       className="rounded-2xl flex flex-col md:flex-row justify-between items-center  md:gap-10"
@@ -12,11 +12,10 @@ const DashBanner = () => {
       {/* Text Section */}
       <div className="w-full md:w-2/3 space-y-4 text-center md:text-left p-8 md:p-12 ">
         <h1 className="text-2xl md:text-3xl xl:text-4xl font-bold text-gray-900">
-          Welcome Back, <span className="text-primaryColor">Coach!</span>
+          Welcome Back, <span className="text-primaryColor">Runner!</span>
         </h1>
         <p className="text-gray-700 leading-relaxed text-sm md:text-base xl:text-2xl">
-          Easily manage all your articles, stay on top of upcoming events, and guide
-          runners across the UAE with your expertise and support.
+          A quick glance at your upcoming events, saved articles, and recent coach connections.
         </p>
       </div>
 
@@ -32,4 +31,4 @@ const DashBanner = () => {
   );
 };
 
-export default DashBanner;
+export default RunnerDashBanner;
