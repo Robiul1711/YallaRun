@@ -43,7 +43,7 @@ const Subscription = () => {
         </div>
       </div>
  
-       <div className=' grid grid-cols-3 gap-8 place-items-center section-padding-x mt-10'>
+       <div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xlg:grid-cols-2 xl:grid-cols-3 gap-8  mt-10'>
             {
                 price?.map((item,index)=>(
                     <PriceCard item={item} key={index} />
