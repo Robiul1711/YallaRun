@@ -7,11 +7,16 @@ import { LiaCommentSolid } from "react-icons/lia";
 import { SavedIcon } from "../icons/CustomIcon";
 
 const ArticleCard = ({ item }) => {
+  // Dummy placeholders
+const dummyArticleImage = "https://dummyimage.com/wuxga";
+const dummyUserAvatar = "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png";
+
+
   return (
     <div className="relative group overflow-hidden rounded-[24px] transition-transform duration-500 ease-out hover:scale-[1.02]">
       {/* Background Image */}
       <img
-        src={item?.image}
+        src={item?.image || dummyArticleImage}
         alt={item?.title || "Article image"}
         className="w-full xlg:h-[620px] h-[400px] object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
@@ -31,13 +36,13 @@ const ArticleCard = ({ item }) => {
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-2">
             <Title20 className="!text-white !font-semibold">
-              {item?.title}
+              {item?.title || "Untitled Article"}
             </Title20>
 
             <div className="flex items-center gap-2">
               <AiFillTags size={20} color="white" />
               <Title16 className="!text-white !font-normal flex-1">
-                {item?.category}
+                {item?.category?.name || "Uncategorized"}
               </Title16>
             </div>
           </div>
@@ -45,16 +50,16 @@ const ArticleCard = ({ item }) => {
           {/* Author Info */}
           <div className="flex items-center gap-3">
             <img
-              src={item?.avatar}
-              alt={item?.user_name || "Author avatar"}
+              src={item?.user?.avatar || dummyUserAvatar}
+              alt={item?.user?.name || "Author avatar"}
               className="w-12 h-12 object-cover rounded-full"
             />
             <div className="flex flex-col">
               <Title20 className="!text-white !font-semibold">
-                {item?.user_name}
+                {item?.user?.name || "Anonymous"}
               </Title20>
               <Title14 className="!text-white !font-normal">
-                {item?.date}
+                {item?.created_at || "Unknown date"}
               </Title14>
             </div>
           </div>
@@ -78,24 +83,28 @@ const ArticleCard = ({ item }) => {
 
           {/* Likes, Comments, Saved */}
           <div className="flex-1 flex gap-2">
-            {[{ icon: BiLike, value: item?.likes }, { icon: LiaCommentSolid, value: item?.comments }, { icon: SavedIcon }].map(
-              (btn, idx) => (
-                <div
-                  key={idx}
-                  className="
-                    flex items-center gap-2 xl:p-3 p-1.5 rounded-full border border-white
-                    bg-[rgba(255,255,255,0.15)] justify-center
-                    transition duration-200 ease-in-out
-                    hover:bg-white/20 hover:border-white/80
-                  "
-                >
-                  <btn.icon size={20} color="white" />
-                  {btn.value !== undefined && (
-                    <Title16 className="!text-white !font-normal">{btn.value}</Title16>
-                  )}
-                </div>
-              )
-            )}
+            {[
+              { icon: BiLike, value: item?.likes },
+              { icon: LiaCommentSolid, value: item?.comments },
+              { icon: SavedIcon },
+            ].map((btn, idx) => (
+              <div
+                key={idx}
+                className="
+                  flex items-center gap-2 xl:p-3 p-1.5 rounded-full border border-white
+                  bg-[rgba(255,255,255,0.15)] justify-center
+                  transition duration-200 ease-in-out
+                  hover:bg-white/20 hover:border-white/80
+                "
+              >
+                <btn.icon size={20} color="white" />
+                {btn.value !== undefined && (
+                  <Title16 className="!text-white !font-normal">
+                    {btn.value}
+                  </Title16>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import AuthProvider from "./providers/AuthProvider";
 import AllValueProvider from "./providers/AllValueProvider";
+import { Slide, ToastContainer } from "react-toastify";
 const queryClient = new QueryClient();
 import { pdfjs } from "react-pdf";
 
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")).render(
         </AllValueProvider>
       </AuthProvider>
       <ReactQueryDevtools initialIsOpen={false} />
+      <ToastContainer position="top-center" draggable transition={Slide} />
     </QueryClientProvider>
   </StrictMode>
 );
