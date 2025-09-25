@@ -2,6 +2,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import CommonInputWrapper from "../common/CommonInputWrapper";
 import ArrowButton from "../common/ArrowButton";
+import useAxiosPublic from "@/hooks/useAxiosPublic";
+import { useMutation } from "@tanstack/react-query";
+import { toast } from "react-toastify";
 
 const RightContactSide = () => {
   const {
@@ -11,8 +14,24 @@ const RightContactSide = () => {
     setValue,
   } = useForm();
 
+  const axiosPublic = useAxiosPublic();
+
+  const { mutate, isPending } = useMutation({
+    mutationFn: async (data) => {
+      const response = await axiosPublic.post("/contact-message/send", data);
+      return response.data;
+    },
+    onSuccess: () => {
+      toast.success("Message sent successfully");
+    },
+    onError: (error) => {
+      console.log(error);
+      toast.error(error?.response?.data?.message || "Something went wrong");
+    },
+  });
+
   const onSubmit = (data) => {
-    console.log(data);
+    mutate(data);
   };
   return (
     <form
@@ -66,7 +85,12 @@ const RightContactSide = () => {
       />
 
       <div className=" w-full flex justify-end items-end">
-        <ArrowButton name="Send Your Message" type="submit" />
+        <ArrowButton
+          loading={isPending}
+          name="Send Your Message"
+          type="submit"
+          className=" w-[270px] h-[60px] flex justify-center items-center"
+        />
       </div>
     </form>
   );

@@ -8,7 +8,7 @@ const Pagination = ({page, setPage,totalPage}) => {
           breakLabel="..."
           nextLabel={<NextIcon />}
           previousLabel={<PrevIcon/>}
-          pageCount={10}
+          pageCount={totalPage}
           pageRangeDisplayed={3}
           marginPagesDisplayed={2}
           onPageChange={(event) => setPage(event.selected + 1)}

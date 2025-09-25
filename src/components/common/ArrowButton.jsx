@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowIcon } from "../icons/CustomIcon";
+import   { BeatLoader } from "react-spinners";
 
 const ArrowButton = ({
   name,
@@ -8,6 +9,7 @@ const ArrowButton = ({
   className = "",
   type = "link", // 'link' | 'button' | 'submit'
   onClick,
+  loading = false,
 }) => {
   const baseClasses =
     "group inline-flex items-center gap-3 rounded-full bg-primaryColor lg:px-6 px-3.5 lg:py-3 py-2 lg:text-lg text-base font-medium text-customBlack transition-colors duration-300 hover:bg-primaryColor/90";
@@ -33,7 +35,7 @@ const ArrowButton = ({
         onClick={onClick}
         className={`${baseClasses} ${className}`}
       >
-        {content}
+      {loading ? <BeatLoader size={8} color="black" /> : content}
       </button>
     );
   }
@@ -41,7 +43,7 @@ const ArrowButton = ({
   // default to Link
   return (
     <Link to={path} className={`${baseClasses} ${className}`}>
-      {content}
+      {loading ? <BeatLoader size={8} color="black" /> : content}
     </Link>
   );
 };
