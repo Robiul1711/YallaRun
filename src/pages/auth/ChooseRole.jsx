@@ -69,7 +69,7 @@ const ChooseRole = () => {
             Back
           </Link>
           <Link
-          to={ role==='runner' ?"/runner-sign-up":"/coach-sign-up"}
+          to={ role==='runner' ?"/sign-in":"/coach-sign-up"}
             type="button"
             className="px-6 py-2 rounded-full bg-lime-500 text-white font-medium shadow-md"
           >

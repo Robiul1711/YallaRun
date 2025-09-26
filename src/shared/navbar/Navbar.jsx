@@ -76,7 +76,7 @@ const Navbar = () => {
           <div className=" flex items-center xl:gap-6 md:gap-3">
             <CommonBtn
               name={`Sign In`}
-              path={`/sign-in`}
+              path={`/choose-role`}
               className={`xlg:block hidden`}
             />
             <LanguageArea />

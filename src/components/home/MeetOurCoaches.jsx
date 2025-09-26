@@ -12,7 +12,7 @@ const MeetOurCoaches = () => {
       />
 
       <div className=" grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xlg:gap-6 gap-2.5">
-        {coachData?.map((item, index) => (
+        {coachData?.slice(0, 4)?.map((item, index) => (
           <CoachCard item={item} key={index} />
         ))}
       </div>

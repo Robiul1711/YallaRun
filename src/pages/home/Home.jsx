@@ -1,4 +1,3 @@
-
 import About from "@/components/home/About";
 import Banner from "@/components/home/Banner";
 import JoinSection from "@/components/home/JoinSection";
@@ -12,12 +11,13 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <About/>
-      <RunningEvent/>
-      <LatestArticle/>
-      <MeetOurCoaches/>
-      <Pricing/>
-      <JoinSection/>
+      <MeetOurCoaches />
+      <LatestArticle />
+      {/* <About/> */}
+      <RunningEvent />
+
+      {/* <Pricing/> */}
+      <JoinSection />
     </div>
   );
 };

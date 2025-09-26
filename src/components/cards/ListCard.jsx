@@ -15,7 +15,7 @@ const ListCard = ({ item }) => {
         to={`#`}
         className="bg-[#E6EEEE] rounded-[32px] xlg:p-6 p-2.5 flex xlg:flex-row flex-col xlg:gap-6 gap-2.5 w-full group duration-200 hover:bg-secondaryColor"
       >
-        <div className=" xlg:w-1/2 w-full h-[352px] rounded-xl duration-200 overflow-hidden">
+        <div className=" xlg:w-1/2 w-full lg:h-[352px] h-[200px] rounded-xl duration-200 overflow-hidden">
           <img
             src={item?.image}
             className=" w-full h-full object-cover block rounded-xl group-hover:scale-105 duration-200"
