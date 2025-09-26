@@ -10,11 +10,6 @@ export const navLinks = [
     path: "/about",
   },
   {
-    id: 3,
-    name: "Events",
-    path: "/events",
-  },
-  {
     id: 4,
     name: "Articles",
     path: "/articles",
@@ -25,19 +20,25 @@ export const navLinks = [
     path: "/coaches",
   },
   {
-    id: 6,
-    name: "Pricing",
-    path: "/pricing",
-  },
-  {
-    id: 7,
-    name: "Contact",
-    path: "/contact",
+    id: 3,
+    name: "Events",
+    path: "/events",
   },
   {
     id: 9,
     name: "Magazine",
     path: "/magazine",
+  },
+
+  // {
+  //   id: 6,
+  //   name: "Pricing",
+  //   path: "/pricing",
+  // },
+  {
+    id: 7,
+    name: "Contact",
+    path: "/contact",
   },
 ];
 
@@ -193,6 +194,34 @@ export const latestArticles = [
 ];
 
 export const coachData = [
+  {
+    id: 1,
+    image: Coach1,
+    name: "Ali Ahmed",
+    category: "Speed & Endurance Coaching",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    id: 2,
+    image: Coach2,
+    name: "Ali Ahmed",
+    category: "Speed & Endurance Coaching",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    id: 3,
+    image: Coach2,
+    name: "Ali Ahmed",
+    category: "Speed & Endurance Coaching",
+    location: "Abu Dhabi, UAE",
+  },
+  {
+    id: 4,
+    image: Coach1,
+    name: "Ali Ahmed",
+    category: "Speed & Endurance Coaching",
+    location: "Abu Dhabi, UAE",
+  },
   {
     id: 1,
     image: Coach1,
@@ -438,11 +467,11 @@ export const eventPreferences = [
 ];
 
 export const tShirtSizes = [
-  { id: 1, label: "XS",  value: "XS" },
-  { id: 2, label: "S",   value: "S" },
-  { id: 3, label: "M",   value: "M" },
-  { id: 4, label: "L",   value: "L" },
-  { id: 5, label: "XL",  value: "XL" },
+  { id: 1, label: "XS", value: "XS" },
+  { id: 2, label: "S", value: "S" },
+  { id: 3, label: "M", value: "M" },
+  { id: 4, label: "L", value: "L" },
+  { id: 5, label: "XL", value: "XL" },
   { id: 6, label: "XXL", value: "XXL" },
   { id: 7, label: "XXXL", value: "XXXL" }, // optional extra-large
 ];
@@ -459,39 +488,36 @@ export const areasOfExpertise = [
 ];
 
 export const availabilityOptions = [
-  { id: 1, label: "Full-Time",   value: "Full-Time" },
-  { id: 2, label: "Part-Time",   value: "Part-Time" },
-  { id: 3, label: "Weekdays",    value: "Weekdays" },
-  { id: 4, label: "Weekends",    value: "Weekends" },
-  { id: 5, label: "Evenings",    value: "Evenings" },
-  { id: 6, label: "Mornings",    value: "Mornings" },
-  { id: 7, label: "Flexible",    value: "Flexible" },
-  { id: 8, label: "On-Call",     value: "On-Call" },
+  { id: 1, label: "Full-Time", value: "Full-Time" },
+  { id: 2, label: "Part-Time", value: "Part-Time" },
+  { id: 3, label: "Weekdays", value: "Weekdays" },
+  { id: 4, label: "Weekends", value: "Weekends" },
+  { id: 5, label: "Evenings", value: "Evenings" },
+  { id: 6, label: "Mornings", value: "Mornings" },
+  { id: 7, label: "Flexible", value: "Flexible" },
+  { id: 8, label: "On-Call", value: "On-Call" },
 ];
 
 export const allComments = [
-    {
-      id: 1,
-      name: "Autumn Phillips",
-      date: "5 Aug, 2025",
-      avatar: "https://i.pravatar.cc/48?img=5",
-      text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
-    },
-    {
-      id: 2,
-      name: "Autumn Phillips",
-      date: "5 Aug, 2025",
-      avatar: "https://i.pravatar.cc/48?img=5",
-      text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
-    },
-    {
-      id: 3,
-      name: "Autumn Phillips",
-      date: "5 Aug, 2025",
-      avatar: "https://i.pravatar.cc/48?img=5",
-      text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
-    },
-  ];
-
-
-
+  {
+    id: 1,
+    name: "Autumn Phillips",
+    date: "5 Aug, 2025",
+    avatar: "https://i.pravatar.cc/48?img=5",
+    text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
+  },
+  {
+    id: 2,
+    name: "Autumn Phillips",
+    date: "5 Aug, 2025",
+    avatar: "https://i.pravatar.cc/48?img=5",
+    text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
+  },
+  {
+    id: 3,
+    name: "Autumn Phillips",
+    date: "5 Aug, 2025",
+    avatar: "https://i.pravatar.cc/48?img=5",
+    text: "Another critical maintenance task is checking your tires frequently. Proper tire pressure is essential for safety, fuel economy, and comfort. Under-inflated tires cause poor handling and increase the risk of blowouts, while over-inflated tires can lead to uneven wear.",
+  },
+];

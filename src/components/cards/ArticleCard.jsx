@@ -18,7 +18,7 @@ const dummyUserAvatar = "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-779
       <img
         src={item?.image || dummyArticleImage}
         alt={item?.title || "Article image"}
-        className="w-full xlg:h-[620px] h-[400px] object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+        className="w-full xlg:h-[620px] md:h-[400px] h-[300px] object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
 
       {/* Overlay Box */}
