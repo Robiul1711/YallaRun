@@ -6,13 +6,15 @@ import ArticleCard from "../cards/ArticleCard";
 import Pagination from "../common/Pagination";
 import useAxiosPublic from "@/hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
+import Loader from "../common/Loader";
+import ErrorComponent from "../common/ErrorComponent";
 
 const ArticleSection = () => {
   const [page, setPage] = useState(1);
 
   const axiosPublic = useAxiosPublic();
 
-  const { data: articles, isLoading } = useQuery({
+  const { data: articles, isLoading ,refetch ,isError } = useQuery({
     queryKey: ["latest-articles" ,page],
     queryFn: async () => {
       const res = await axiosPublic.get(`/articles.index?page=${page}`);
@@ -20,7 +22,21 @@ const ArticleSection = () => {
     },
   });
 
-  console.log(articles?.data);
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (isError) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <ErrorComponent
+          title="Failed to load magazines"
+          message="Please check your connection or try again later."
+          onRetry={() => refetch()}
+        />
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col lg:gap-8 gap-4 section-padding-x section-padding-y">
       <ArticleFilter />
