@@ -15,11 +15,11 @@ const MagazineCard = ({ item }) => {
       <div className=" lg:p-4 p-2 flex flex-col gap-2">
         <div className=" flex flex-col gap-1">
           <Title20 className={`!text-customBlack !font-medium`}>
-            The Finish Line
+            {item?.title}
           </Title20>
 
           <Title16 className={`text-[#303030] font-normal`}>
-            Sep 5, 2025
+            {item?.created_at}
           </Title16>
         </div>
 
