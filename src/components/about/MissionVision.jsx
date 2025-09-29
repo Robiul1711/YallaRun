@@ -3,6 +3,10 @@ import ImageVision from "@/assets/images/ImageVision.png";
 import { RiFocus2Line } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
 import { Title24, Title32 } from "../common/Title";
+import useAxiosPublic from "@/hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
+import Loader from "../common/Loader";
+import ErrorComponent from "../common/ErrorComponent";
 
 const MissionVision = () => {
   const [active, setActive] = useState("mission");
@@ -26,12 +30,42 @@ const MissionVision = () => {
     },
   ];
 
+  const axiosPublic = useAxiosPublic();
+
+  const { data, isLoading,isError,refetch } = useQuery({
+    queryKey: ["about-mission-vision"],
+    queryFn: async () => {
+      const res = await axiosPublic.get("/about-hero");
+      return res.data;
+    },
+  });
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (isError) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <ErrorComponent
+          title="Failed to load magazines"
+          message="Please check your connection or try again later."
+          onRetry={() => refetch()}
+        />
+      </div>
+    );
+  }
+
+  console.log(data?.data);
+
+  
+
   return (
     <div className="section-padding-x section-padding-y w-full flex flex-col md:flex-row xlg:gap-10 gap-4">
       {/* Left Image */}
       <div className="md:w-1/2 w-full rounded-[32px] overflow-hidden md:h-[680px] h-[400px]">
         <img
-          src={ImageVision}
+          src={data?.data[0]?.image}
           alt="Vision"
           className="w-full h-full object-cover rounded-[32px]"
         />
@@ -39,13 +73,13 @@ const MissionVision = () => {
 
       {/* Right Panels */}
       <div className="md:w-1/2 w-full flex flex-col lg:gap-6 gap-3">
-        {panels.map((panel) => {
-          const isActive = active === panel.key;
+        {data?.data?.map((panel,index) => {
+          const isActive = active === index;
           return (
             <div
-              key={panel.key}
-              onMouseEnter={() => setActive(panel.key)}
-              onClick={() => setActive(panel.key)}
+              key={index}
+              onMouseEnter={() => setActive(index)}
+              onClick={() => setActive(index)}
               className={`
                 rounded-xl md:p-6 p-4 cursor-pointer flex flex-col gap-4
                 transition-all duration-500 ease-in-out
@@ -94,12 +128,16 @@ const MissionVision = () => {
                   isActive ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <Title32
-                  className={` transition-colors duration-300 ${
+                 <Title32
+                  className={`prose prose-invert max-w-none transition-colors duration-300 ${
                     isActive ? "!text-white" : "!text-gray-700"
                   }`}
                 >
-                  {panel.text}
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: panel.description || "",
+                    }}
+                  />
                 </Title32>
               </div>
             </div>
