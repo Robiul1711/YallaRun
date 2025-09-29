@@ -26,8 +26,6 @@ const MagazineSection = () => {
     },
   });
 
-  
-
   if (isLoading) {
     return <Loader />;
   }

@@ -10,18 +10,21 @@ import useAxiosPublic from "@/hooks/useAxiosPublic";
 const AboutPage = () => {
   const axiosPublic = useAxiosPublic();
   const { data: BannerData, isLoading } = useQuery({
-    queryKey: ["banner"],
+    queryKey: ["about-banner"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/home-banner");
+      const res = await axiosPublic.get("/about-banner");
       return res.data;
     },
   });
+
+  console.log(BannerData?.data);
   return (
     <div>
       <CommonBanner
-        bannerImage={AboutBannerImage}
-        title={`About YallaRun`}
-        text={`Inspiring, connecting, and elevating runners across the UAE`}
+       loading ={isLoading}
+        bannerImage={BannerData?.data?.image || AboutBannerImage}
+        title={BannerData?.data?.title || `About YallaRun`}
+        text={BannerData?.data?.sub_title || `Your source for running stories, training insights, and community highlights.`}
       ></CommonBanner>
       ;
       <MissionVision />
