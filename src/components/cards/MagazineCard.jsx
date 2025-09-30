@@ -3,6 +3,7 @@ import { Title16, Title20 } from "../common/Title";
 import { Link } from "react-router-dom";
 
 const MagazineCard = ({ item }) => {
+  console.log(item);
   return (
     <div className=" border-[1px] border-[#D9E5E6] rounded-[16px]">
       <div className=" lg:h-[320px] h-[250px]">
@@ -23,14 +24,17 @@ const MagazineCard = ({ item }) => {
           </Title16>
         </div>
 
-        <Link
-          to={`/magazine/${item?.id}`}
-          className="lg:px-6 px-4 lg:py-[14px] py-[6px] bg-primaryColor text-white flex justify-center items-center rounded-full 
-             border border-primaryColor transition-all duration-200 
-             hover:bg-white hover:text-primaryColor hover:shadow-md"
-        >
-          Read More
-        </Link>
+       <a
+  href={item?.pdf} 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="lg:px-6 px-4 lg:py-[14px] py-[6px] bg-primaryColor text-white flex justify-center items-center rounded-full 
+     border border-primaryColor transition-all duration-200 
+     hover:bg-white hover:text-primaryColor hover:shadow-md"
+>
+  Read More
+</a>
+
       </div>
     </div>
   );

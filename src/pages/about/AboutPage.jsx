@@ -26,7 +26,7 @@ const AboutPage = () => {
         title={BannerData?.data?.title || `About YallaRun`}
         text={BannerData?.data?.sub_title || `Your source for running stories, training insights, and community highlights.`}
       ></CommonBanner>
-      ;
+     
       <MissionVision />
       <WhatWeDo />
       <JoinSection />
